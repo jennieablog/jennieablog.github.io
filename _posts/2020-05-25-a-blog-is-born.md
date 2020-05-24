@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A blog is born 👶
-subtitle : Creating and hosting my first online portfolio for free
+subtitle : Creating a website under 1 hour and hosting it for free indefinitely
 tags: [jekyll, github, grape-theme]
 author: Jennie Ablog
 comments : True

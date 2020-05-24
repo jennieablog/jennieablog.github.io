@@ -37,10 +37,24 @@ layout: page
       </ul>
     </article>
     <article class="skills col-12 col-md-6">
-      
-      <p class="title">SKILLS</p>
-      {% for _ in profile.skills %}
-      <a href="">
+
+      <p class="title">programming</p>
+      {% for _ in profile.programming %}
+      <a>
+        <span class="tag">{{ _.skill }}</span>
+      </a>
+      {% endfor %}
+
+      <p class="title">web development</p>
+      {% for _ in profile.webdev %}
+      <a>
+        <span class="tag">{{ _.skill }}</span>
+      </a>
+      {% endfor %}
+
+      <p class="title">other skills</p>
+      {% for _ in profile.others %}
+      <a>
         <span class="tag">{{ _.skill }}</span>
       </a>
       {% endfor %}
@@ -58,6 +72,7 @@ layout: page
         </li>
         {% endfor %}
       </ul> -->
+
     </article>
   </section>
 

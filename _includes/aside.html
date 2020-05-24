@@ -1,23 +1,25 @@
 <!-- User Profile -->
 <div id="profile">
   {% assign profile = site.theme_settings.profile %}
-  <a href="{{ site.baseurl }}/portfolio">
+  <a href="#">
     <div class="img-wrap">
       <img src="{{ site.baseurl }}/{{ profile.image }}" alt="profile-image">
     </div>
   </a>
   <p class="username">{{ profile.username }}</p>
   <p class="description">{{ profile.description }}</p>
-
   <!-- Social icons from Font Awesome -->
   <ul id="icons">
     {% include icons.html %}
   </ul>
+  <br>
+  <a href="{{ site.url }}/portfolio"><span class="tag">GO TO MY PORTFOLIO ✨</span></a><br>
 </div>
+
 <!-- Tag Navigation -->
 <div id="tag-wrap">
   <a href="{{ site.url }}/tags">
-    <!-- <p class="title">Tags</p> -->
+    <p class="title">Tags</p>
   </a>
   {% for tag in site.tags %}
   <a href="{{site.baseurl}}/tags#{{ tag | first | cgi_encode }}">
@@ -26,10 +28,11 @@
   {% endfor %}
 </div>
 <!-- Project -->
-<div id="proj-wrap">
+<!-- <div id="proj-wrap">
   <a href="{{ site.url }}/portfolio">
-    <p class="title">✨ My Projects ✨</p>
+    <p class="title">Projects</p>
     <hr class="proj-hr">
+  </a>
     {% for _ in site.data.projects %}
     {% assign project = _.project %}
     {% if project.print %}
@@ -40,5 +43,4 @@
     <hr class="proj-hr">
     {% endif %}
     {% endfor %}
-  </a>
-</div>
+</div> -->

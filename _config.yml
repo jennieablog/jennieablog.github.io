@@ -11,7 +11,7 @@ theme_settings :
   profile :
     image : assets/img/profile.jpg
     username : Jennie Ablog
-    description : A BSc CS student who loves to teach herself a lot of stuff. 👩🏽‍💻 
+    description : A BSc CS student who loves to teach herself a lot of stuff. 👩🏾‍💻
     experience :
       - start : "June 2017 "
         end: "August 2017"
@@ -19,24 +19,31 @@ theme_settings :
       - start : "July 2018"
         end: "August 2018"
         experience : Intern, UP ITDC
-      - start : 2018
-        end: 2020
-        experience : Cadet Officer, UP ROTC
-      - start : 2014
-        end: "202x"
+      - start : "2014"
+        end : ""
         experience : BSc CS Student, UP Diliman
         
-    skills : 
-      - skill : Python
-        value : 90  # Percent value
-      - skill : Ruby on Rails, HTML5, CSS3
-        value : 80  # Percent value
-      - skill : C, C++
-        value : 80  # Percent value
-      - skill : Java, JavaScript
-        value : 60  # Percent value
+    programming : 
+      - skill : python
+      - skill : c
+      - skill : c++
+      - skill : java
+      - skill : ruby
 
-        
+    webdev : 
+      - skill : ruby on rails
+      - skill : html5
+      - skill : css3
+      - skill : javascript
+      - skill : jekyll
+      - skill : react native
+      - skill : bootstrap
+    
+    others : 
+      - skill : git
+      - skill : sklearn
+      - skill : nem blockchain
+
   # Icons
   icons :
     email:  jennieablog@gmail.com

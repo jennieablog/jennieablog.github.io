@@ -1,0 +1,66 @@
+# Site Settings
+baseurl: ""
+url : "https://jennieablog.github.io"
+
+# Blog Settings
+theme_settings :
+  title : Jennie Ablog
+  favicon : assets/favicon.ico
+
+  # Profile Settings
+  profile :
+    image : assets/img/profile.jpg
+    username : Jennie Ablog
+    description : A BSc CS student who loves to teach herself a lot of stuff. 👩🏽‍💻 
+    experience :
+      - start : "June 2017 "
+        end: "August 2017"
+        experience : Intern, Nokia Manila TC
+      - start : "July 2018"
+        end: "August 2018"
+        experience : Intern, UP ITDC
+      - start : 2018
+        end: 2020
+        experience : Cadet Officer, UP ROTC
+      - start : 2014
+        end: "202x"
+        experience : BSc CS Student, UP Diliman
+        
+    skills : 
+      - skill : Python
+        value : 90  # Percent value
+      - skill : Ruby on Rails, HTML5, CSS3
+        value : 80  # Percent value
+      - skill : C, C++
+        value : 80  # Percent value
+      - skill : Java, JavaScript
+        value : 60  # Percent value
+
+        
+  # Icons
+  icons :
+    email:  jennieablog@gmail.com
+    linkedin:  # Full URL 
+    github: jennieablog
+    gitlab: 
+    bitbucket: 
+    google_plus:
+    twitter: jennironni
+    youtube:
+    facebook: jennieablog
+    instagram:
+
+  # Disqus
+  disqus_shortname :
+
+# Pagination
+paginate: 5
+paginate_path: "blog/page:num"
+
+# Build Ssttings
+sass:
+  sass_dir: _sass
+  style: :compressed
+gems: [jekyll-paginate]
+bootstrap:
+  assets: true

@@ -30,7 +30,7 @@ comments : True
 
 	>Be sure the first part of the repo name exactly matches your username and that you set your repository to <strong>`public`</strong>. Otherwise, it will not work.
 <br>
-2. Create a `git-ignore` file and add the following line: `_site/`
+2. Create a `.gitignore` file and add the following line: `_site/`
 
 	> This file tells `git` to ignore the `_site` directory that Jekyll automatically generates each time a commit is made.
 <br>

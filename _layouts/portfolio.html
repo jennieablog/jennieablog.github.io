@@ -37,7 +37,15 @@ layout: page
       </ul>
     </article>
     <article class="skills col-12 col-md-6">
+      
       <p class="title">SKILLS</p>
+      {% for _ in profile.skills %}
+      <a href="">
+        <span class="tag">{{ _.skill }}</span>
+      </a>
+      {% endfor %}
+
+      <!-- <p class="title">SKILLS</p>
       <ul class="skill-list">
         {% for _ in profile.skills %}
         <li class="skill">
@@ -49,7 +57,7 @@ layout: page
           </div>
         </li>
         {% endfor %}
-      </ul>
+      </ul> -->
     </article>
   </section>
 

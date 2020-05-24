@@ -1,1 +1,0 @@
-<strong>Welcome!</strong> I just made this website with `Jekyll`, an open source static page generator, and I'm hosting it using `GitHub Pages`. All the services I used are 100% <strong>free</strong>. I'm currently using this <a href="https://github.com/naye0ng/Grape-Theme">`grape-theme`</a> with only a few modifications to the original code. 

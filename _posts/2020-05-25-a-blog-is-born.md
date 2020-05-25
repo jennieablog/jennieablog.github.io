@@ -3,10 +3,10 @@ layout: post
 title: A blog is born 👶
 subtitle : Creating a website in under an hour & hosting it for free
 tags: [jekyll, github, grape-theme]
+image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 author: Jennie Ablog
 comments : True
 ---
-
 <strong>Welcome!</strong> I just made this website with `Jekyll`, an open source static page generator, and I'm hosting it using `GitHub Pages`. All the services I used are 100% <strong>free</strong>. I'm currently using this <a href="https://github.com/naye0ng/Grape-Theme">`grape-theme`</a> with only a few modifications to the original code. You can find my source code <a href="https://github.com/jennieablog/jennieablog.github.io">here</a>.<br><br>
 
 <strong>Alright.</strong> Now I'm going to show you how to do it. 👩🏾‍💻<br><br>

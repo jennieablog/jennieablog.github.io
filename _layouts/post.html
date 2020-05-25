@@ -9,7 +9,14 @@ layout: page
       {{ page.date | date: "%B %-d, %Y" }}
     </p>
   </section>
+
   <section class="post-content">
+    {% if page.image %}
+      <div class="img-wrap">
+        <img src="{{ page.image }}" alt="user_image">
+      </div>
+    {% endif %}
+    <br>
     {{ content }}
   </section>
 </div>

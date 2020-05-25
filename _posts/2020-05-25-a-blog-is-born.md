@@ -22,6 +22,7 @@ comments : True
 - <a href="https://git-scm.com/">Git</a> (version control)
 - <a href="https://github.com/">GitHub</a> (you need an account)
 - <a href="https://bundler.io/">Bundler</a>
+- <a href="https://jekyllrb.com/docs/installation/macos/#install-command-line-tools">Here</a> is a complete installation guide from the Jekyll website.
 
 <br>
 
@@ -44,7 +45,7 @@ comments : True
 	- [Jekyll Themes dot org](https://jekyllthemes.org)
 <br>
 2. Once you've chosen a theme, download and extract the file to your local git repository at `~../[username].github.io/`.
-	> You can always choose to write your own HTML and CSS independently. I just find it much more convenient and time-efficient to pick a pre-made theme and personalize it to my liking.
+	> You can always choose to write your own HTML and CSS [independently](https://jekyllrb.com/tutorials/convert-site-to-jekyll/). I just find it much more convenient and time-efficient to pick a pre-made theme and personalize it to my liking.
 <br>
 3. Run `bundle install` on your local git repository to install dependencies for your Jekyll site.
 <br>

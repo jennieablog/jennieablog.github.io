@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A blog is born 👶
-subtitle : Creating a website in under 1 hour & hosting it for free indefinitely
+subtitle : Creating a website in under an hour & hosting it for free
 tags: [jekyll, github, grape-theme]
 author: Jennie Ablog
 comments : True
@@ -72,7 +72,6 @@ theme_settings :
 {% endhighlight %}
 
 1. Your Jekyll site's configuration variables can be found at the file called `config.yml`. You can fill out missing fields or replace unwanted variables completely, and it will look a lot like the code block above.
-	> When in doubt, always consult the `README.md` of the GitHub repository of your chosen Jekyll theme, like [this one](https://github.com/naye0ng/Grape-Theme/blob/master/README.md) or [this one](https://github.com/sergiokopplin/indigo/blob/gh-pages/README.md).
 2. Once you're already satisfied with the way it looks on your `localhost`, you can proceed to deployment to GitHub Pages.
 
 <br>
@@ -86,3 +85,30 @@ theme_settings :
 
 <br>
 
+<h3>Writing Your First Blog Post</h3>
+1. Downloaded Jekyll themes usually come with sample blog posts which are located in a folder named `posts/`.
+2. Navigate to that folder. You will see files that are likely named in this format `YYYY-MM-DD-sample-blog-post.md`. When you open it it will look something like an `html` file except that it has something else in the beginning.
+3. What you see in the beginning of the file is called a `yaml` Front Matter block. Between the triple-dashed lines, you can set predefined variables or even define your own. They will then be made available for access using Liquid tags in the file. For more information on Front Matter, visit this [page](https://jekyllrb.com/docs/front-matter/).
+{% highlight python %}
+---
+layout: post
+title: title
+subtitle : subtitle
+tags: [tag1, tag2]
+author: 
+comments : 
+---
+{% endhighlight %}
+
+
+<br>
+
+After writing your blog post, you can `git commit` and `git push` again to the master branch of your `git` repository. Your website shall be updated accordingly.
+
+<br>
+
+> When in doubt, always consult the `README.md` of the GitHub repository of your chosen Jekyll theme, like [this one](https://github.com/naye0ng/Grape-Theme/blob/master/README.md) or [this one](https://github.com/sergiokopplin/indigo/blob/gh-pages/README.md).
+
+<br>
+
+<strong>Voila!</strong> You now have your own portfolio/blog website hosted for free for-ever. That wasn't so hard, was it? 🤙

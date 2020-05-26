@@ -108,7 +108,7 @@ After writing your blog post, you can `git commit` and `git push` again to the m
 
 <br>
 
-> When in doubt, always consult the `README.md` of the GitHub repository of your chosen Jekyll theme, like [this one](https://github.com/naye0ng/Grape-Theme/blob/master/README.md) or [this one](https://github.com/sergiokopplin/indigo/blob/gh-pages/README.md).
+> When in doubt, you can always consult the Jekyll [documentation](https://jekyllrb.com/docs/), or the `README.md` of the GitHub repository of your chosen Jekyll theme, like [this one](https://github.com/naye0ng/Grape-Theme/blob/master/README.md) or [this one](https://github.com/sergiokopplin/indigo/blob/gh-pages/README.md).
 
 <br>
 

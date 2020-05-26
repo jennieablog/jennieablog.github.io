@@ -1,38 +1,25 @@
-# - project :
-#     print : True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
-#     modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
-#     url : https://github.com/naye0ng/Grape-Theme # Full URL
-#     image : "portfolio.png" # path: assets/project/
-#     date : 2019.06.09 - Developing
-#     title : Grape-Theme
-#     summary : A awesome jekyll theme!
-#     description : This project is my first jekyll theme. and everyone can customize this easily.  
-#     contents :
-#         - title : 1. 블로그 첫 화면 구성
-#           image : home.png
-#           description : <li>Responsive Layout</li>
-#             <li>User Profile</li> 
-#             <li>Tags</li> 
-#             <li>Projects</li> 
-#             <li>Pagination</li>
-#         - title : 2. 태그 페이지
-#           image : tags.png
-#           description : <li>Responsive Layout</li> 
-#             <li>Tags</li> 
-#         - title : 3. 남은 개발 과제
-#           image :
-#           description : <li>project 부분 디자인 변경</li>
-#             <li>favicon.ico, search 기능</li>
-#             <li>OG Tag 추가</li>
-#             <li>profile 이미지 효과</li>
-#             <li>gem 배포</li> 
-
 - project :
     print : True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
     modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
-    url :  # Full URL
-    image : # path: assets/project/
-    date : "~"
-    title : Under construction...
-    summary : This feature is under construction
-    description :  
+    url : https://github.com/jennieablog/EnglishToSign # Full URL
+    image :  englishtofsl.png # path: assets/project/
+    date : 2019.11.11 - Developing
+    title : English to FSL
+    summary : A System for Converting English Text to FSL
+    description : "An automatic translation system from English text to Filipino Sign Language (FSL) using the E-Sign Approach"
+    contents :
+        - title : Translation Process
+          description : <ol><li>1. Parsing</li>
+            <li>2. Omission</li>
+            <li>3. Translation</li>
+            <li>4. Lemmatization</li>
+            <li>5. Animation</li></ol>
+        - title : Dev Tools
+          description :
+            <li>Python NLTK Library</li>
+            <li>JASigning Applet</li>
+            <li>ESign Editor</li>
+
+
+
+ 

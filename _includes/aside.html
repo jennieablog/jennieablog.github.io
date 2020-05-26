@@ -1,19 +1,21 @@
 <!-- User Profile -->
 <div id="profile">
   {% assign profile = site.theme_settings.profile %}
-  <a href="#">
-    <div class="img-wrap">
-      <img src="{{ site.baseurl }}/{{ profile.image }}" alt="profile-image">
-    </div>
+  <div class="img-wrap">
+    <img src="{{ site.baseurl }}/{{ profile.image }}" alt="jennie-ablog">
+  </div>
+  <a class="title" href="{{ site.url }}/portfolio">
+    <h3>{{ profile.username }}</h3>
   </a>
-  <p class="username">{{ profile.username }}</p>
+  <!-- <p class="username"><a href="#">{{ profile.username }}</a></p> -->
   <p class="description">{{ profile.description }}</p>
   <!-- Social icons from Font Awesome -->
   <ul id="icons">
     {% include icons.html %}
   </ul>
-  <br>
-  <a href="{{ site.url }}/portfolio"><span class="tag">GO TO MY PORTFOLIO ✨</span></a><br>
+  
+  <!-- <a href="{{ site.url }}/portfolio"><span class="tag">GO TO MY PORTFOLIO ✨</span></a><br><br> -->
+
 </div>
 
 <!-- Tag Navigation -->
@@ -27,8 +29,9 @@
   </a>
   {% endfor %}
 </div>
+
 <!-- Project -->
-<!-- <div id="proj-wrap">
+<div id="proj-wrap">
   <a href="{{ site.url }}/portfolio">
     <p class="title">Projects</p>
     <hr class="proj-hr">
@@ -43,4 +46,4 @@
     <hr class="proj-hr">
     {% endif %}
     {% endfor %}
-</div> -->
+</div>

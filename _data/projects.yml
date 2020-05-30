@@ -4,9 +4,9 @@
     url : https://github.com/jennieablog/EnglishToSign # Full URL
     image :  englishtofsl.png # path: assets/project/
     date : 2019.11.11 - Developing
-    title : English to FSL
+    title : English2FSL
     summary : A System for Converting English Text to FSL
-    description : "An automatic translation system from English text to Filipino Sign Language (FSL) using the E-Sign Approach"
+    description : "An automatic translation system from English text to Filipino Sign Language (FSL)"
     contents :
         - title : Translation Process
           description : <ol><li>1. Parsing</li>
@@ -19,6 +19,7 @@
             <li>Python NLTK Library</li>
             <li>JASigning Applet</li>
             <li>ESign Editor</li>
+            <li>Flask</li>
 
 
 

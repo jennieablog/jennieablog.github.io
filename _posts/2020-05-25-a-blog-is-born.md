@@ -4,6 +4,8 @@ title: A blog is born 👶
 subtitle : Creating a website in under an hour & hosting it for free
 tags: [jekyll, github, grape-theme]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+displayimage: true
+final: true
 author: Jennie Ablog
 comments : True
 ---

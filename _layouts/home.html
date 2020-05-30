@@ -18,6 +18,7 @@ layout: default
     <!-- Post List -->
     <section id="posts" class="col-md-8">
       {% for post in paginator.posts %}
+      {% if post.final %}
       <div class="post">
         <a href="{{ post.url | relative_url }}">
           <div class="post-wrap">
@@ -43,10 +44,11 @@ layout: default
                 </ul>
               </div>
             </div>
-            
+
           </div>
         </a>
       </div>
+      {% endif %}
       {% endfor %}
       <!-- Pagination -->
       {% if paginator.total_pages > 1 %}

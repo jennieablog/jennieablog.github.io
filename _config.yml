@@ -37,6 +37,7 @@ theme_settings :
       - skill : javascript
       - skill : jekyll
       - skill : react native
+      - skill : flask
       - skill : bootstrap
     
     others : 
@@ -62,7 +63,7 @@ theme_settings :
     instagram:
 
   # Disqus
-  disqus_shortname :
+  disqus_shortname : jennieablog
 
 # Pagination
 paginate: 5

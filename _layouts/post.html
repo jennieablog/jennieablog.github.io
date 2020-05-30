@@ -11,12 +11,13 @@ layout: page
   </section>
 
   <section class="post-content">
-    {% if page.image %}
+    {% if page.displayimage %}
       <div class="img-wrap">
         <img src="{{ page.image }}" alt="user_image">
       </div>
+      <br>
     {% endif %}
-    <br>
+
     {{ content }}
   </section>
 </div>

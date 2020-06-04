@@ -1,8 +1,11 @@
 .highlight pre { 
     padding: 10px; 
     margin : 10px 0;
-    * {font-size:0.9rem;
+    * {	font-size:0.7rem;
+    	font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+    	line-height: 0px;
     }
+    overflow: scroll;
 }
 
 // https://github.com/richleland/pygments-css

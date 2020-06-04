@@ -52,6 +52,7 @@ django-admin startproject mydictionary
 
 2. Create a new app within the created project. We'll call it `entries`.
 ```bash
+cd mydictionary
 python manage.py startapp entries
 ```
 
@@ -83,12 +84,18 @@ python manage.py migrate
 from django.db import models
 # Word model has only one attribute: word_text.
 class Word(models.Model):
-  word_text = models.CharField(max_length=200)  
+  word_text = models.CharField(max_length=200)
+  # We'll use the word_text to represent the Word Object for convenience.
+  def __str__(self):
+        return self.word_text 
 # Definition model should have pos_tag (part of speech) and definition_text.
 class Definition(models.Model):
     word = models.ForeignKey(Word, on_delete=models.CASCADE)
     pos_tag = models.CharField(max_length=10)
     definition_text = models.CharField(max_length=200)
+    # We'll use the definition_text to represent the Definition Object for convenience.
+    def __str__(self):
+        return self.definition_text
 ```
 
 3. Make a new migration to tell Django that you made some changes to the initial model.
@@ -106,18 +113,109 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-6. Allow the app's tables to be modifiable by editing `myapp/admin.py`
+6. Allow the app's tables to be modifiable by editing `entries/admin.py`
 ```python
-# myapp/admin.py
+# entries/admin.py
 from django.contrib import admin
 from .models import Word, Definition
 admin.site.register(Word)
 admin.site.register(Definition)
 ```
 
-7. Log in at `localhost:8000/admin` and populate initial DB as admin.<br><br>
+7. Finally run the server and log in at `localhost:8000/admin` to populate initial DB as admin.
+```bash
+python manage.py runserver
+```
+<br><br>
 
+
+### 🚧 CHECKPOINT 1: Test admin functionality.
+
+> ☑️  Go to `localhost:8000/admin`.
+>
+> ☑️  Log-in using your site administrator credentials.
+>
+> ☑️ Add, change, and delete new Words and Definitions.
+>
+> ☑️ Add, change, and delete Users.
+>
+> ☑️ Add, change, and delete User Groups.
+>
+> ☑️ Track recent actions.
+
+<br><br>
+
+### Make the views.
 ***
-###  🚧 Checkpoint 1: Test admin functionality.
-*** 
 
+1. In `entries/views.py`, import the following packages.
+```python
+# entries/views.py
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from .models import Word
+```
+
+2. Initial views in with basic text `HttpResponse`.
+```python
+# entries/views.py
+# Word index view
+def index(request):
+  return HttpResponse("You're looking at the word index page.")
+# Word details view
+def detail(request, word_id):
+    return HttpResponse("You're looking at word %s." % word_id)
+# Modify word view
+def modify(request, word_id):
+    return HttpResponse("You're modifying word %s." % word_id)
+```
+<br>
+
+
+### Set-up app-level routes.
+***
+
+1. Create a file called `urls.py` in the entries app directory.
+```bash
+cd mydictionary/entries
+touch urls.py
+```
+2. Add `urlpatterns` for index, detail, and modify views.
+```python
+# entries/urls.py
+from django.urls import path
+from . import views
+urlpatterns = [
+    path('', views.index, name='index'), # index
+    path('<int:word_id>/', views.detail, name='detail'), # detail
+    path('<int:word_id>/modify/', views.modify, name='modify') # modify
+]
+```
+<br>
+
+### Set-up project-level routes.
+***
+
+1. In `mydictionary/urls.py`, import include and path.
+```python
+# mydictionary/urls.py
+from django.urls import include, path
+```
+
+2. Add app to `urlpatterns` list in the same file.
+```python
+# mydictionary/urls.py
+path('entries/', include("entries.urls")), 
+```
+<br><br>
+
+### 🚧 CHECKPOINT 2: Test views and routes.
+
+> ☑️  Go to `localhost:8000/entries`.
+>
+> ☑️  Go to `http://localhost:8000/entries/1/`.
+>
+> ☑️  Go to `http://localhost:8000/entries/1/modify`.
+
+
+<br><br>

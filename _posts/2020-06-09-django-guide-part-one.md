@@ -1,32 +1,32 @@
 ---
 layout: post
-title: Django from zero 💃
+title: How to Django 1 💃
 subtitle : Initializing your django application
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
-final: true
+final: false
 author: Jennie Ablog
 comments : True
 ---
 
 <!-- INTRODUCTION -->
 
-Hey there! This is <strong>Part 1</strong> of my [three-part guide](https://jennieablog.github.io/2020/06/01/django-beginners-guide.html) for building a simple blog app using the Django web framework.<br><br>
+Hey there! This is **part one** of my [three-part guide]({{ site.baseurl }}/2020/06/01/django-beginners-guide.html) for building a simple blog app using the Django web framework.<br><br>
 
-## General Outline
+## Outline
 ***
 
-1. Set-up the development environment.
-2. Create the django project.
-3. Create the blog app.
-4.
-5. Define the models for the blog app.
-6. Create a site administrator.
-7. Try using the Django shell.
+1. [Set-up the development environment.](#step1)
+2. [Create the django project.](#step2)
+3. [Create the blog app.](#step3)
+4. [Define the models for the blog app.](#step4)
+5. [Create a site administrator.](#step5)
+6. [Try using the Django shell.](#step6)
 
+<br>
 
-### Set-up the development environment.
+### 1. Set-up the development environment.<a name="step1"></a>
 ***
 Before anything else, let's go ahead and set-up your development environment where you're going to install several things. If you're using a MacOS, just follow everything below. If not, there are instructions in the Django website for your OS.<br><br>
 
@@ -62,7 +62,7 @@ pip3 install -r requirements.txt
 ```
 <br>
 
-### Create the django project.
+### 2. Create the django project.<a name="step2"></a>
 ***
 Make sure your virtual environment is activated before you proceed. If you already have your development environment set-up,  let's go ahead and start to Django!<br><br>
 
@@ -116,7 +116,7 @@ python manage.py runserver
 ```
 <br><br>
 
-### Create the app.
+### 3. Create the blog app.<a name="step3"></a>
 ***
 You have already created your django project but it's empty. It should have at least one application inside. Go ahead and create your first app which you will name blog, because yes, you guessed it: we're making a blog app yet again.<br><br>
 
@@ -166,7 +166,7 @@ INSTALLED_APPS = [
 ```
 <br><br>
 
-### Define the models for the blog app.
+### 4. Define the models for the blog app.<a name="step4"></a>
 ***
 A simple blog app should contain at least one Object to be functional, and that is: the Post. What's in a post? What can you do with your posts? We'll answer all that in this part.<br><br>
 
@@ -210,13 +210,14 @@ class Post(models.Model):
 	def __str__(self):
 		return self.title
 ```
-4. We're keeping the model simple for now. Go ahead and create your tables based on your newly defined `Post` model.
+4. We're keeping the model simple for now. Make a new migration to tell django that you made some changes to the initial model. Then go ahead and migrate these changes to create new tables for your model.
 ```bash
 python manage.py makemigrations blog
+python manage.py migrate
 ```
 <br><br>
 
-### Create a site administrator.
+### 5. Create a site administrator.<a name="step5"></a>
 ***
 All sites need at least one administrator to be allowed to manage its database. Now, as the project creator, you can already do that with the Django shell which will be discussed further in the next section. But as you will discover, there is a more convenient and quicker way to do these things, and that is through  a superuser account.<br><br>
 
@@ -232,9 +233,9 @@ admin.site.register(Post) # Register Post model.
 python manage.py createsuperuser
 ```
 
-3. After creating your account, you can now log-in using your credentials in `localhost:8000/admin` and feel free to add, edit, and delete Posts through the interface.<br><br>
+3. After creating your account, you can now log-in using your credentials in `localhost:8000/admin` and feel free to add, edit, and delete Posts through the interface.<br><br><br>
  
-### Try using the Django shell.
+### 6. Try using the Django shell.<a name="step6"></a>
 ***
 As previously mentioned, as site creator, you can manage your database through the Django shell. Let's discuss a number of things you can do with it.<br><br>
 
@@ -267,3 +268,9 @@ python manage.py shell
 
 4. Once you've gotten the hang of it, you can go ahead and exit the shell.
 ```python
+>>> exit()
+```
+<br><br>
+
+#### Give me a high five! ✋
+Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. Take a small break, or click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-two.html)  to go on ahead.

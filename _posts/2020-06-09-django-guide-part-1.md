@@ -1,11 +1,11 @@
 ---
 layout: post
-title: How to Django 1 💃
+title: Part 1️⃣ of how to django 💃
 subtitle : Initializing your django application
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
-final: false
+final: true
 author: Jennie Ablog
 comments : True
 ---
@@ -64,7 +64,7 @@ pip3 install -r requirements.txt
 
 ### 2. Create the django project.<a name="step2"></a>
 ***
-Make sure your virtual environment is activated before you proceed. If you already have your development environment set-up,  let's go ahead and start to Django!<br><br>
+Make sure your virtual environment is activated before you proceed. You should be seeing your venv name in parentheses in the command line every time. If you already have your development environment set-up,  let's go ahead and start to Django!<br><br>
 
 1. Start the django project.
 ```bash
@@ -181,15 +181,14 @@ created_date
 published_date
 ```
 
-2. Next, define your object methods. What can be done to a blog post? Here are some examples.
+2. Next, define your object methods. What can be done to a  `Post`? To `publish()` it is an example. Sure you can also edit, delete, and create a post, but for this guide, we're not defining them as Object methods. We are going to treat them differently to avoid redundancy in code. We'll deal with those in part two of this guide.
 ```bash
 Post
 --------
 Publish
-Edit
 ```
 
-3. Once you got these questions figured out, you are ready to define your model for the app. Go ahead and open `models.py` to do that.
+3. Now you are ready to define your model for the app. Go ahead and open `models.py` to do that.
 ```python
 from django.conf import settings
 from django.db import models
@@ -273,4 +272,6 @@ python manage.py shell
 <br><br>
 
 #### Give me a high five! ✋
-Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. Take a small break, or click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-two.html)  to go on ahead.
+Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. 
+
+<!-- Take a small break, or click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-2.html)  to go on ahead. -->

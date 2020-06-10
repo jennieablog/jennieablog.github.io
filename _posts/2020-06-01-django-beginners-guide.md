@@ -22,7 +22,7 @@ comments : True
 - Basic HTML and CSS
 <br><br>
 
-Listed above are what I think are the prerequisites for this particular guide. I really believe that they are easy to learn. If you're not confident with you're skills with the above items, I suggest going through the following tutorials first: <br><br>
+Listed above are what I think are the prerequisites for this particular guide. I really believe that they are easy to learn. If you're not confident with your skills with the above items, I suggest going through the following tutorials first: <br><br>
 
 - [An Introduction to the Linux Terminal](https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal)
 - [GitHub Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)

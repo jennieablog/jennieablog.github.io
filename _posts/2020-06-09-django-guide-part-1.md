@@ -12,7 +12,7 @@ comments : True
 
 <!-- INTRODUCTION -->
 
-Hey there! This is **part one** of my [three-part guide]({{ site.baseurl }}/2020/06/01/django-beginners-guide.html) for building a simple blog app using the Django web framework.<br><br>
+Hey there! This is **part one** of my [four-part guide]({{ site.baseurl }}/2020/06/01/django-beginners-guide.html) for building a simple blog app using the Django web framework.<br><br>
 
 ## Outline
 ***
@@ -22,7 +22,7 @@ Hey there! This is **part one** of my [three-part guide]({{ site.baseurl }}/2020
 3. [Create the blog app.](#step3)
 4. [Define the models for the blog app.](#step4)
 5. [Create a site administrator.](#step5)
-6. [Try using the Django shell.](#step6)
+6. [Use the Django shell to create a post.](#step6)
 
 <br>
 
@@ -234,7 +234,7 @@ python manage.py createsuperuser
 
 3. After creating your account, you can now log-in using your credentials in `localhost:8000/admin` and feel free to add, edit, and delete Posts through the interface.<br><br><br>
  
-### 6. Try using the Django shell.<a name="step6"></a>
+### 6. Use the Django shell to create a post.<a name="step6"></a>
 ***
 As previously mentioned, as site creator, you can manage your database through the Django shell. Let's discuss a number of things you can do with it.<br><br>
 
@@ -249,11 +249,11 @@ python manage.py shell
 >>> from django.contrib.auth.models import User
 ```
 
-3. Here are some commands you can play with. Feel free to try them line by line.
+3. Try these commands line by line and make a sample `Post`.
 ```python
 >>> Post.objects.all() # to list all Posts
 >>> User.objects.all() # to list all Users
->>> admin = User.objects.get(username='admin') # retrieve a user named 'admin'
+>>> admin = User.objects.get(username=[your_superusername]) # retrieve the superuser you created earlier
 >>> Post.objects.create(author=admin, title='Sample title', text='Test') # create blog post with admin as author
 >>> Post.objects.filter(author=admin) # filter all posts authored by admin
 >>> Post.objects.filter(title__contains='title') # filter all posts containing 'title'

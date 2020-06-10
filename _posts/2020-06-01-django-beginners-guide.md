@@ -35,35 +35,24 @@ Listed above are what I think are the prerequisites for this particular guide. I
 
 ### Expectations
 ***
-Using this guide, you should be able to create a simple blog web app with Django and deploy it using Heroku, which means that you will have **a live blogsite running** if you stick with me towards the end. I tried my best to make this guide as beginner friendly as possible. Also, I didn't want it to be overwhelming so I divided it into three parts which I've outlined below.<br><br>
+Using this guide, you should be able to create a simple blog web app with Django and deploy it using Heroku, which means that you will have **a live blogsite running** if you stick with me towards the end. I tried my best to make this guide as beginner friendly as possible. Also, I didn't want it to be overwhelming so I divided it into four parts which I've outlined below.<br><br>
 
 ### Outline
 ***
-[Part 1: Initializing your django application]({{ site.baseurl }}/2020/06/09/django-guide-part-one.html) 
+[Part 1: Initializing your django application]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html) 
 
 1. Set-up the development environment.
 2. Create the django project.
 3. Create the blog app.
 4. Define the models for the blog app.
 5. Create a site administrator.
-6. Try using the Django shell.
+6. Use the Django shell to create a post.
 
-[Part 2: Django URLs, views, and templates]({{ site.baseurl }}/2020/06/09/django-guide-part-two.html) 
+Part 2: Django URLs, views, and templates
 
-1. Listing your app's features.
-2. Set-up your URLs.
-3. Set-up your views.
-4. Set-up your templates.
-5. Organize your static files.
+Part 3: Django forms
 
-[Part 3: Deploying Django]({{ site.baseurl }}/2020/06/09/django-guide-part-three.html)
-
-1. Install and configure heroku.
-2. Install prerequisites.
-3. Configure static assets and database.
-4. Create a heroku app. 
-5. Initialize git repository.
-6. Deploy!
+Part 4: Deploying Django
 
 
 <br>

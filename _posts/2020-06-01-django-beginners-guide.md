@@ -39,7 +39,7 @@ Using this guide, you should be able to create a simple blog web app with Django
 
 ### Outline
 ***
-[Part 1: Initializing your django application]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html) 
+[Part 1: Initializing your Django application]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html) 
 
 1. Set-up the development environment.
 2. Create the django project.
@@ -48,11 +48,17 @@ Using this guide, you should be able to create a simple blog web app with Django
 5. Create a site administrator.
 6. Use the Django shell to create a post.
 
-Part 2: Django URLs, views, and templates
+[Part 2: Creating the Django application interface]({{ site.baseurl }}/2020/06/09/django-guide-part-2.html)
 
-Part 3: Django forms
+1. List the app's features.
+2. Set-up the URLs and initialize the views.
+3. Set-up the templates folder.
+4. Create the index page.
+5. Create the post page.
 
-Part 4: Deploying Django
+Part 3: Getting data from Django forms
+
+Part 4: Deploying your Django app
 
 
 <br>

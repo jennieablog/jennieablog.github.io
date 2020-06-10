@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Part 1️⃣ of how to django 💃
-subtitle : Initializing your django application
+subtitle : Initializing your Django application
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
@@ -189,26 +189,32 @@ Publish
 ```
 
 3. Now you are ready to define your model for the app. Go ahead and open `models.py` to do that.
-```python
-from django.conf import settings
-from django.db import models
-from django.utils import timezone # you need this to know the time when publishing posts
-# Define the Post model.
-class Post(models.Model):
-	# Post attributes: author, title, text, and published_date
-	author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	title = models.CharField(max_length=200)
-	text = models.TextField()
-	created_date = models.DateTimeField(default=timezone.now)
-	published_date = models.DateTimeField(blank=True, null=True)
-	# Method for publishing the post.
-	def publish(self):
-		self.published_date = timezone.now()
-		self.save()
-	# Using the Post title to identify our posts.
-	def __str__(self):
-		return self.title
-```
+	```python
+	from django.conf import settings
+	from django.db import models
+	from django.utils import timezone # you need this to know the time when publishing posts
+
+	# Define the Post model.
+	class Post(models.Model):
+
+		# Post attributes: author, title, text, and published_date
+		author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+		title = models.CharField(max_length=200)
+		text = models.TextField()
+		created_date = models.DateTimeField(default=timezone.now)
+		published_date = models.DateTimeField(blank=True, null=True)
+
+		# Method for publishing the post.
+		def publish(self):
+			self.published_date = timezone.now()
+			self.save()
+
+		# Using the Post title to identify our posts.
+		def __str__(self):
+			return self.title
+
+	```
+
 4. We're keeping the model simple for now. Make a new migration to tell django that you made some changes to the initial model. Then go ahead and migrate these changes to create new tables for your model.
 ```bash
 python manage.py makemigrations blog
@@ -271,7 +277,5 @@ python manage.py shell
 ```
 <br><br>
 
-#### Give me a high five! ✋
-Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. 
-
-<!-- Take a small break, or click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-2.html)  to go on ahead. -->
+## Give me a high five! ✋
+Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. Take a small break, or click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-2.html)  to go on ahead.

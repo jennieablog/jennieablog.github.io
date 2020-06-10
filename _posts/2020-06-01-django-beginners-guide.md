@@ -68,4 +68,4 @@ Using this guide, you should be able to create a simple blog web app with Django
 
 <br>
 
-**Alright.** Now go ahead and click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-one.html) to get started on your Django development journey. Good luck!
+**Alright.** Now go ahead and click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html) to get started on your Django development journey. Good luck!

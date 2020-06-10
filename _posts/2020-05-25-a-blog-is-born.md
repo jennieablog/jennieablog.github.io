@@ -16,20 +16,35 @@ comments : True
 
 This serves as a <strong>guide</strong> on launching your github website using Jekyll and Github Pages.<br><br>
 
-### 0. Prerequisites
+### Prerequisites
+***
 
-> Skills
+Skills
 - Basic HTML and CSS
 - Git
 
-> Installations
+Installations
 - <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> (programming language)
 - <a href="https://git-scm.com/">Git</a> (version control)
 - <a href="https://github.com/">GitHub</a> (you need an account)
 - <a href="https://bundler.io/">Bundler</a>
 - <a href="https://jekyllrb.com/docs/installation/macos/#install-command-line-tools">Here</a> is a complete installation guide from the Jekyll website.
 
-### 1. Get started with GitHub.
+<br>
+
+### Outline
+***
+
+1. [Get started with Github.](#step1)
+2. [Find a theme for your Jekyll site.](#step2)
+3. [Personalize your Jekyll site.](#step3)
+4. [Deploy your site to GitHub pages.](#step4)
+5. [Write your first blog post.](#step5)
+
+<br>
+
+### 1. Get started with GitHub.<a name="step1"></a>
+***
 
 1. Sign in to your GitHub account.
 2. Create a new repository and name it `[username].github.io`, replacing `[username]` with your GitHub username. Be sure the first part of the repo name exactly matches your username and that you set your repository to <strong>public</strong>. Otherwise, it will not work.
@@ -42,7 +57,10 @@ git clone https://github.com/[username]/[username].github.io.git
   ``` 
   This way you can always preview your Jekyll site first before pushing it to GitHub pages.
 
-### 2. Find a theme for your Jekyll site.
+<br>
+
+### 2. Find a theme for your Jekyll site.<a name="step2"></a>
+***
 
 1. You can find, preview, and download themes for your Jekyll site on different galleries found online such as the following:
 	- [JamStack](https://jamstackthemes.dev/ssg/jekyll/)
@@ -59,9 +77,12 @@ bundle install
   ```bash
 bundle exec jekyll serve
   ```
-  It should be up and running at `http://localhost:4000/`.<br>
+  It should be up and running at `http://localhost:4000/`.
 
-### 3. Personalize your Jekyll site.
+<br>
+
+### 3. Personalize your Jekyll site.<a name="step3"></a>
+***
 
 1. Your Jekyll site's configuration variables can be found at the file called `config.yml`. You can fill out missing fields or replace unwanted variables completely, and it will look a lot like the code block below.
   ```yaml
@@ -78,9 +99,12 @@ profile :
   username : "Jennie Ablog"
   description : "A BSc CS student who loves to teach herself a lot of stuff. 👩🏾‍💻"
   ```
-2. Once you're already satisfied with the way it looks on your `localhost`, you can proceed to deployment to GitHub Pages.<br>
+2. Once you're already satisfied with the way it looks on your `localhost`, you can proceed to deployment to GitHub Pages.
 
-### 4. Deploy your site to GitHub Pages
+<br>
+
+### 4. Deploy your site to GitHub Pages.<a name="step4"></a>
+***
 
 1. Fire up your terminal and navigate to your local git repository.
     ```bash
@@ -94,9 +118,12 @@ git commit -m "initial commit for jekyll site"
   ```bash
 git push origin master
     ```
-4. After a while, you can view your Jekyll Site running at `[username].github.io`.<br>
+4. After a while, you can view your Jekyll Site running at `[username].github.io`.
 
-### 5. Write your first blog post.
+<br>
+
+### 5. Write your first blog post.<a name="step5"></a>
+***
 
 1. Downloaded Jekyll themes usually come with sample blog posts which are located in a folder named `posts/`.
 2. Navigate to that folder. You will see files that are likely named in this format `YYYY-MM-DD-sample-blog-post.md`. When you open it it will look something like an `html` file except that it has something else in the beginning.
@@ -110,10 +137,12 @@ author:
 comments : 
 ---
   ```
-3. What you see in the beginning of the file is called a `yaml` Front Matter block. Between the triple-dashed lines, you can set predefined variables or even define your own. They will then be made available for access using Liquid tags in the file. For more information on Front Matter, visit this [page](https://jekyllrb.com/docs/front-matter/).<br><br>
+3. What you see in the beginning of the file is called a `yaml` Front Matter block. Between the triple-dashed lines, you can set predefined variables or even define your own. They will then be made available for access using Liquid tags in the file. For more information on Front Matter, visit this [page](https://jekyllrb.com/docs/front-matter/).
 
-After writing your blog post, you can `git commit` and `git push` again to the master branch of your `git` repository. Your website shall be updated accordingly.<br>
+4. After writing your blog post, you can `git commit` and `git push` again to the master branch of your `git` repository. Your website shall be updated accordingly.<br><br>
 
 > When in doubt, you can always consult the Jekyll [documentation](https://jekyllrb.com/docs/), or the `README.md` of the GitHub repository of your chosen Jekyll theme, like [this one](https://github.com/naye0ng/Grape-Theme/blob/master/README.md) or [this one](https://github.com/sergiokopplin/indigo/blob/gh-pages/README.md).
 
-<strong>Voila!</strong> You now have your own portfolio/blog website hosted for free for-ever. That wasn't so hard, was it? 🤙
+<br>
+## Well done! 🙆🏽‍♀️
+You now have your own portfolio/blog website hosted for free for-ever!

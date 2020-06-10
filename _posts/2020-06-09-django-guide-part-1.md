@@ -278,4 +278,4 @@ python manage.py shell
 <br><br>
 
 ## Give me a high five! ✋
-Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. Take a small break, or click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-2.html)  to go on ahead.
+Hey, you've reached the end of part one! By now you should be able to run the server as administrator and manage the database through the interface. On the next part, we will start to make the interface of our blog app. Take a small break, or click [here]({{ site.baseurl }}/2020/06/10/django-guide-part-2.html)  to go on ahead.

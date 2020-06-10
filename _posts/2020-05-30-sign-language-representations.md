@@ -25,14 +25,14 @@ Written representations of sign are of not much use for the Deaf who naturally p
 
 ### Signed Content Videos
 
-Never having heard sound makes it much harder for the the Deaf to learn to speak or read English or any other spoken/written language [(Azbel, 2004)](http://psych.nyu.edu/pelli/docs/azbel2004intel.pdf). Because society has become more and more dependent on technology, information are now usually obtained through digital means. However, the same information flashed through the screens of people's devices are by default, <strong>made by hearing people for hearing people</strong> and without giving much consideration to deaf users. The lack of signed content on various digital platforms makes a plethora of available information  <strong>inaccessible to the Deaf</strong>. To resolve this, signed content are now being inserted in the form of live or pre-recorded videos of <strong>human sign language interpreters</strong> signing spoken or written information contained in these digital platforms.<br>
+Never having heard sound makes it much harder for the the Deaf to learn to speak or read English or any other spoken/written language [(Azbel, 2004)](http://psych.nyu.edu/pelli/docs/azbel2004intel.pdf). Because society has become more and more dependent on technology, information are now usually obtained through digital means. However, the same information flashed through the screens of people's devices are by default, <strong>made by hearing people for hearing people</strong> and without giving much consideration to deaf users. The lack of signed content on various digital platforms makes a plethora of available information  <strong>inaccessible to the Deaf</strong>.<br>
 
 ><strong>Figure 2.</strong> FSL-signed content in [Philippine news television](https://www.youtube.com/watch?v=IVNSfODbuSA)
  ![signed news]({{ site.baseurl }}/assets/img/signednews.png)
 
 To resolve this, signed content are now being inserted in the form of live or pre-recorded videos of <strong>human sign language interpreters</strong> signing spoken or written information contained in these digital platforms.<br><br>
 
-<!-- Automaticall Generated Signed Content -->
+<!-- Automatically Generated Signed Content -->
 
 ### Automatically Generated Signed Content
 

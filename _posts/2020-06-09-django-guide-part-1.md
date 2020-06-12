@@ -114,11 +114,13 @@ python manage.py migrate # creates db.sqlite3 file
 ```bash
 python manage.py runserver
 ```
+><strong>Screenshot 1.</strong> Django default landing page.
+ ![django default landing page]({{ site.baseurl }}/assets/img/django1.png)
 <br><br>
 
 ### 3. Create the blog app.<a name="step3"></a>
 ***
-You have already created your django project but it's empty. It should have at least one application inside. Go ahead and create your first app which you will name blog, because yes, you guessed it: we're making a blog app yet again.<br><br>
+You have already created your django project but it's empty. It should have at least one application inside. Go ahead and create your first app which you will name blog, because we're making a blog app!<br><br>
 
 1. Start the blog app.
 ```bash
@@ -188,8 +190,10 @@ Post
 Publish
 ```
 
-3. Now you are ready to define your model for the app. Go ahead and open `models.py` to do that.
+3. Now you are ready to define your model for the app. Go ahead and open `mysite/models.py` to do that.
 	```python
+	# mysite/models.py
+
 	from django.conf import settings
 	from django.db import models
 	from django.utils import timezone # you need this to know the time when publishing posts
@@ -238,7 +242,15 @@ admin.site.register(Post) # Register Post model.
 python manage.py createsuperuser
 ```
 
-3. After creating your account, you can now log-in using your credentials in `localhost:8000/admin` and feel free to add, edit, and delete Posts through the interface.<br><br><br>
+3. After creating your account, you can now log-in using your credentials in `localhost:8000/admin`.
+><strong>Screenshot 2.</strong> Django Administrator Log-in Box
+ ![django admin login page]({{ site.baseurl }}/assets/img/django2.png){: .width-50}
+
+4. You can add, edit, and delete Posts through the interface, but let's leave that for later.
+><strong>Screenshot 3.</strong> Django Admin Functionality
+ ![django admin login page]({{ site.baseurl }}/assets/img/django3.png){: .width-100}
+
+<br><br><br>
  
 ### 6. Use the Django shell to create a post.<a name="step6"></a>
 ***
@@ -255,7 +267,7 @@ python manage.py shell
 >>> from django.contrib.auth.models import User
 ```
 
-3. Try these commands line by line and make a sample `Post`.
+3. Try these commands line by line and make your first `Post`.
 ```python
 >>> Post.objects.all() # to list all Posts
 >>> User.objects.all() # to list all Users

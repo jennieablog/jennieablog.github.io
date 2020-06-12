@@ -89,11 +89,11 @@ You have three things to consider for each feature: **model, view, and template*
 		path('post/<int:pk>/edit', views.post_edit, name='post_edit'),
 	]
     ```
-3. Go to `urls.py` in `mysite/`. Remember that a project can have multiple apps inside of it. This is where you will set-up project-level URLs. You need include the urls of your app in the project's urls. By default the admin URL is included so you didn't have to worry about that in part one.
+3. Go to `urls.py` in `mysite/`. Remember that a project can have multiple apps inside of it. This is where you will set-up project-level URLs. You need **include** (import include) the urls of your app in the project's urls. By default the admin URL is included so you didn't have to worry about that in part one.
 
     ```python
 	from django.contrib import admin
-	from django.urls import path, include
+	from django.urls import path, include # add include
 
     urlpatterns = [
 		# Include path for admin
@@ -123,18 +123,26 @@ You have three things to consider for each feature: **model, view, and template*
 	```
 
 5. Run the server and go to `http://localhost:8000`. You should be able to see the index page.
+	><strong>Rendering post_list template at</strong> `http://localhost:8000`
+	![post_list template 1]({{ site.baseurl }}/assets/img/django4.png)
 
 6. Trying going to a post with any id e.g. `localhost:8000/post/99/`. You shall see the id number you chose in the webpage: "You are at post: 99." Note that your dummy view doesn't care about whether or not the Object with that id really exists, so at this point you can input any id as long as it's an integer.
+	><strong>Rendering post_detail template at</strong> `localhost:8000/post/99/`
+	![post_detail template 1]({{ site.baseurl }}/assets/img/django5.png)
 
 7. Trying editing a post with any id e.g. `localhost:8000/post/11/edit/`, and you should see the text: "You are editing post: 11." on your browser.
+	><strong>Rendering post_edit template at</strong> `localhost:8000/post/11/edit/`
+	![post_edit template 1]({{ site.baseurl }}/assets/img/django6.png)
 
 8. Finally, try creating a new post by visiting `localhost:8000/post/new/`, and you should see "You are creating a new post." on your browser.
+	><strong>Rendering post_new template at</strong> `localhost:8000/post/new/`
+	![post_new template 1]({{ site.baseurl }}/assets/img/django7.png)
 
 <br><br>
 
 ### 🚧 Hey there, just a checkpoint!
 
-Having too much fun or is it just too much? Regardless, I just wanted to congratulate you for a great work so far! At this point, you now have an understanding how Django processes URLs and a faint idea about how views work. Take time to process what you've accomplished so far. If you want to take a break before going to the next part, then go on ahead, you deserve it. 👍🏽 <br><br>
+Having too much fun or is it just too much? Regardless, I just wanted to congratulate you for your accomplishments so far. At this point, you now have an understanding of how Django processes URLs and a faint idea about how views work. Take time to process it. If you want to take a break before going to the next part, then go on ahead, you deserve it. 👍🏽 <br><br>
 Now that you already have your paths working, you can now move on to creating views and templates to display each of our webpages. We'll set up a **view and template** for each of our app features. But first, let's have a recap. 🤔
 
 > 🔍 **What's in a view?**
@@ -239,7 +247,27 @@ Alrighty! Now we begin to create the REAL views. Let's do it chronologically, st
 
 	```
 
-3. To check this, go ahead and run the server. When you go to `http://localhost:8000` , you should see a list of posts like so.
+3. Now, it's time to construct the template `post_list.html` . Remember that you passed data from the view called `posts` . The nice thing about Django templates is that you can put `python` code in it in between `{ %` and `% }` or `{ {` and `} }`. Go ahead and display all of the posts through a `for` loop.  
+{% raw %}
+	```html
+	<div>
+		<h1><a href="/">My Blog</a></h1>
+	</div>
+
+	{% for post in posts %}
+			<div>
+			<p>published: {{ post.published_date }}</p>
+		    <h2><a href="">{{ post.title }}</a></h2>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+	{% endfor %}
+	```
+{% endraw %}
+
+4. To check this, go ahead and run the server. When you go to `http://localhost:8000` , you should see a list of posts like so.
+	><strong>Rendering post_list template at</strong> `http://localhost:8000`
+	![post_list template 2]({{ site.baseurl }}/assets/img/django8.png)
+
 
 <br><br>
 
@@ -259,9 +287,29 @@ Up next is to construct the `post_detail` view that should render a template dis
 		return render(request, 'blog/post_detail.html', context)
 	```
 
-2. Unlike the previous dummy view, the `post_id` is now used by the view to retrieve a `Post` object from the database. Now, you can test if that is true by going to a `Post` you have created previously using the Django shell. You can also try going to a non-existent post and you should see an error.
+2. Unlike the previous dummy view, the `post_id` is now used by the view to retrieve a `Post` object from the database. Now recreate the `post_detail.html` template.
+
+{% raw %}
+	```html
+	<div class="post">
+		<div class="date">
+			{{ post.published_date }}
+		</div>
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.text|linebreaksbr }}</p>
+	</div>
+	```
+{% endraw %}
+
+3. Now, you can test if that is true by going to the first `Post` you have created previously using the Django shell. Go to that page through the URL.
+	><strong>Rendering post_detail template at</strong> `localhost:8000/post/1/`
+	![post_detail template 2]({{ site.baseurl }}/assets/img/django9.png)
+
+4. You can also try going to a non-existent post and you should see an error.
+	><strong>Rendering default error_404 template at</strong> `localhost:8000/post/20/` as there are no post with `id=20`.
+	![error_404 template]({{ site.baseurl }}/assets/img/django10.png)
 
 <br><br>
 
 ## Wow! You've made it this far! 👏🏽
-Hey, you've reached the end of part two! Give yourself a pat on the back and take time to process what you've learned so far. At this point you now have an index page and a post page. That's proof that you've obtained a deeper understanding of how models, views, and templates work. In the next part, we'll discuss how to receive information from the user's end through Django forms.
+Hey, you've reached the end of part two! Give yourself a pat on the back and take time to process what you've learned so far. At this point you now have an index page and a post page. That's proof that you've obtained a deeper understanding of how models, views, and templates work. In the next part, we'll discuss how to receive information from the user's end through Django forms. Click <a href='{{ site.baseurl }}/2020/06/11/django-guide-part-3.html'>here</a> to continue.

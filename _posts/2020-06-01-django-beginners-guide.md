@@ -56,9 +56,14 @@ Using this guide, you should be able to create a simple blog web app with Django
 4. Create the index page.
 5. Create the post page.
 
-Part 3: Getting data from Django forms
+[Part 3: Getting data from Django forms]({{ site.baseurl }}/2020/06/11/django-guide-part-3.html)
 
-Part 4: Deploying your Django app
+1. Create the Django form for the model.
+2. Link the form to its corresponding views and templates.
+3. Make the site navigation better.
+4. Create the base template for all templates.
+
+[Part 4: Deploying your Django app]()
 
 
 <br>

@@ -308,19 +308,15 @@ Notice that it doesn't look good enough yet since the navbar is covering some el
 	{% extends 'blog/base.html' %}
 
 	{% block content %}
-		<div class="post">
-			{% if post.published_date %}
-			<div class="date">
+	<h2>{{ post.title }}
+	<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
+		<div class="date">
 			{{ post.published_date }}
-			</div>
-			{% endif %}
-			<h2>
-				{{ post.title }}
-				<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-			</h2>
-			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
-	{% endblock %}
+		<p>{{ post.text|linebreaksbr }}</p>
+	</div>
+	{% endblock%}
+
 	```
 {% endraw %}
 

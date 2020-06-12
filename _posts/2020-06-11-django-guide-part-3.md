@@ -31,7 +31,7 @@ These are the final features for your site: creating and editing blog posts. For
 
 <br>
 
-1. Django forms have their own file. Create a file named `[forms.py](http://forms.py)` inside the blog directory.
+1. Django forms have their own file. Create a file named `forms.py` inside `mysite/blog`.
 	```bash
 	blog
 	└── forms.py
@@ -60,8 +60,15 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 
 <br>
 
-1. Go ahead and redefine the `post_new` view first.
+1. Go ahead and include the `PostForm` you just created as well as the `redirect` shortcut in `views.py`. Then redefine the `post_new` view.
 	```python
+	# Import PostForm and redirect shortcut first
+
+	import .forms import PostForm
+	import django.shortcuts import redirect
+
+	# ...
+
 	def post_new(request):
 
 		if request.method == "POST":
@@ -85,7 +92,7 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 		return render(request, 'blog/post_new.html', context)
 	```
 
-2.  Now is the time to put something in the `post_new.html` template. Go ahead and do that.
+2.  Now is the time to put something in the `post_new.html` template. Go ahead and do that. In here we use the HTML form and add the {% raw %} `{% csrf_token %}` {% endraw %} tag for security.
 {% raw %}
 	```html
 	<h2>New Post</h2>
@@ -98,7 +105,15 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 	```
 {% endraw %}
 
-3. Finally, redefine the `post_edit` view in the same way you did for `post_new`. Because you are to modify an existing post, add the `instance=post` argument when `PostForm()` is called.
+3. Okay let's do a quick check up. Visit the new post page and submit a new post through the URL `localhost:4000/post/new/`.
+	><strong>Rendering post_new template at</strong> `localhost:4000/post/new/`
+	![post_new template 1]({{ site.baseurl }}/assets/img/django11.png)
+
+4. Go back to the index page and you should see your new post. 
+	><strong>New post in post_list template at</strong> `localhost:4000/`
+	![post_list template]({{ site.baseurl }}/assets/img/django12.png)
+
+5. Finally, redefine the `post_edit` view in the same way you did for `post_new`. Because you are to modify an existing post, add the `instance=post` argument when `PostForm()` is called.
 	```python
 	def post_edit(request, pk):
 
@@ -128,7 +143,7 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 		return render(request, 'blog/post_edit.html', {'form': form})
 	```
 
-4. Put this in the `post_edit.html` template.
+5. Put this in the `post_edit.html` template.
 {% raw %}
 	```html
 	<h2>Editing Post</h2>
@@ -141,14 +156,11 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 	```
 {% endraw %}
 
-5. Okay let's do a quick check up. Visit the new post page and submit a new post through the URL `[localhost:4000/post/new/](http://localhost:4000/post/new/)`.
-	> PICTURE
-
-6. Try editing your very first Post through the URL `[localhost:4000/post/1/edit](http://localhost:4000/post/1/edit)`.
-	> PICTURE
+6. Try editing your very first Post by appending a `/edit` to the post_page URL of any post.
+	><strong>Rendering post_edit template at</strong> `localhost:4000/post/1/edit`
+	![post_edit template 1]({{ site.baseurl }}/assets/img/django13.png)
 
 7. Go back to the index page and you will see the posts are updated. Now, you don't see any link from any view going to the new post page or the edit post page. Let's do that in the next steps.
-	> PICTURE
 
 <br><br>
 
@@ -175,17 +187,19 @@ It would be best to add a **link to the new post page** in the index page. A lin
 2. To add a simple navbar, add the following code. Put the button linking to the new post page after the nav-header. Now, put the link within liquid tags with the format `url '<path_name>'`. Our path name in this case is `post_new`.
 {% raw %}
 	```html
+	<!-- Nav Bar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
-			<div class="navbar-header">
-			<a class="navbar-brand" href="#">My Blog</a>
-			</div>
-			<!-- Add button here. -->	
-			<a href="{% url 'post_new' %}">
-				<button class="btn navbar-btn">New Post</button>
-			</a>
+		<div class="navbar-header">
+		<a class="navbar-brand" href="/">My Blog</a>
+		</div>
+		<!-- Add button here. -->	
+		<a href="{% url 'post_new' %}">
+		 <button class="btn navbar-btn navbar-right">New Post</button>
+		</a>
 		</div>
 	</nav>
+	<!-- Nav Bar -->
 	```
 {% endraw %}
 
@@ -209,68 +223,68 @@ It would be best to add a **link to the new post page** in the index page. A lin
 ### 4. Create the base template for all templates.<a name="step4"></a>
 ***
 
-Notice that if you click new post, the nav bar and footer disappears. To sustain these elements, you could copy and paste their code in your other templates. However, there is a smarter and more sustainable way to do that: create a base template.
+Notice that it doesn't look good enough yet since the navbar is covering some elements. Also notice that if you click new post, the nav bar and footer disappears. To solve these issues, you will have to create a base template.
 
 <br>
 
 1. Under the templates folder, create a file called `base.html` and cut-and-paste in the code for the navigation bar and footer from `post_list.html`.  `base.html` should have this.
 {% raw %}
-    ```html
+	```html
 	<html>
 
-		<head>
-			
-			<title>My Blog</title>
-		
-			<!-- Bootstrap -->
-			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		
-		</head>
+	<head>
 
-		<body>
+		<title>My Blog</title>
 
-			<!-- Nav Bar -->
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container-fluid">
-				    <div class="navbar-header">
-						<a class="navbar-brand" href="#">My Blog</a>
-					</div>
-			
-					<!-- Create new post button -->		
-					<a href="{% url 'post_new' %}">
-						<button class="btn navbar-btn">New Post</button>
-					</a>
-				</div>
-    		</nav>
-    		<!-- Nav Bar -->
-    	
-			<!-- Content -->
-			<div class="content container">
-				<div class="row">
-					<div class="col-md-8">
-						<!-- This is where django puts the content -->
-						{% block content %}
-						{% endblock %}
-					</div>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	</head>
+
+	<body>
+
+		<!-- Nav Bar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="/">My Blog</a>
+			</div>
+			<!-- Add button here. -->	
+			<a href="{% url 'post_new' %}">
+			<button class="btn navbar-btn navbar-right">New Post</button>
+			</a>
+			</div>
+		</nav>
+		<!-- Nav Bar -->
+
+
+		<!-- Content -->
+		<div class="content container" style="padding-top: 12rem">
+			<div class="row">
+				<div class="col-md-8">
+				<!-- This is where django puts the content -->
+				{% block content %}
+				{% endblock %}
 				</div>
 			</div>
-			<!-- Content -->
-    	
-			<!-- Footer -->
-			<footer class="page-footer font-small black">
-				<!-- Copyright -->
-				<div class="footer-copyright text-center py-3">© 2020 Copyright:
-					<a href="https://jennieablog.github.io/"> jennieablog</a>
-				</div>
-				<!-- Copyright -->
-			</footer>
-			<!-- Footer -->
+		</div>
+		<!-- Content -->
 
-    	</body>
+		<!-- Footer -->
+		<footer class="page-footer font-small black">
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2020 Copyright:
+			 <a href="https://jennieablog.github.io/"> jennieablog</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
 
-    </html>
-    ```
+	</body>
+
+	</html>
+	```
 {% endraw %}
 
 2. How is this going to work? Go to the other templates and add the following lines of code.
@@ -286,6 +300,8 @@ Notice that if you click new post, the nav bar and footer disappears. To sustain
 {% endraw %}
 
 3. Click the New Post button or any post in the index page and you should  still see the nav bar and footer.
+	>><strong>Rendering new post_list with new base template</strong> `localhost:4000`
+	![post_list template x]({{ site.baseurl }}/assets/img/django14.png)
 4. Finally let's add an edit button to the posts just beside the post title. Go ahead and edit `post_detail.html`.
 {% raw %}
 	```html
@@ -309,7 +325,8 @@ Notice that if you click new post, the nav bar and footer disappears. To sustain
 {% endraw %}
 
 5. Test the edit feature by clicking the button, and that's it!
-	> PICTURE
+	><strong>Rendering post_detail with base template at</strong> `localhost:4000/post/1/`
+	![post_detail template x]({{ site.baseurl }}/assets/img/django15.png)
 
 <br><br>
 

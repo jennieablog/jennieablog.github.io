@@ -247,20 +247,22 @@ Alrighty! Now we begin to create the REAL views. Let's do it chronologically, st
 
 	```
 
-3. Now, it's time to construct the template `post_list.html` . Remember that you passed data from the view called `posts` . The nice thing about Django templates is that you can put `python` code in it in between `{ %` and `% }` or `{ {` and `} }`. Go ahead and display all of the posts through a `for` loop.  
+3. Now, it's time to construct the template `post_list.html` . Remember that you passed data from the view called `posts` . The nice thing about Django templates is that you can put `python` code in it in between `{ %` and `% }` or `{ {` and `} }`. Go ahead and display all of the posts through a `for` loop.
 {% raw %}
 	```html
+
 	<div>
 		<h1><a href="/">My Blog</a></h1>
 	</div>
 
 	{% for post in posts %}
-			<div>
-			<p>published: {{ post.published_date }}</p>
+		<div>
 		    <h2><a href="">{{ post.title }}</a></h2>
+		    <p>published: {{ post.published_date }}</p>
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
 	{% endfor %}
+
 	```
 {% endraw %}
 
@@ -274,9 +276,9 @@ Alrighty! Now we begin to create the REAL views. Let's do it chronologically, st
 ### 5. Create the post page.<a name="step5"></a>
 ***
 
-Up next is to construct the `post_detail` view that should render a template displaying the contents of a certain `Post`.<br><br>
+You'd want to link those Post titles in the index page to their respective Post pages. To do that, first you must construct the `post_detail` view that should render a template displaying the contents of a certain `Post`.<br><br>
 
-1. Redefine the `post_detail` view as follows. This new view receives the **request (request)** from the user as well as a **primary key (pk)** from the URL. This key is the unique identifier of a `Post` in our database. Use `get_object_or_404()` to handle the error if the `pk` does not correspond to any `Post`. Otherwise, pass the retrieved `Post` object to the template called `blog/post_detail.html` .
+1. Redefine the `post_detail` view as follows. This new view receives the **request (request)** from the user as well as a **primary key (pk)** from the URL as what was pointed to . This key is the unique identifier of a `Post` in our database. Use `get_object_or_404()` to handle the error if the `pk` does not correspond to any `Post`. Otherwise, pass the retrieved `Post` object to the template called `blog/post_detail.html` .
 
 	```python
 	def post_detail(request, pk):
@@ -292,21 +294,28 @@ Up next is to construct the `post_detail` view that should render a template dis
 {% raw %}
 	```html
 	<div class="post">
+		<h2>{{ post.title }}</h2>
 		<div class="date">
 			{{ post.published_date }}
 		</div>
-		<h2>{{ post.title }}</h2>
 		<p>{{ post.text|linebreaksbr }}</p>
 	</div>
 	```
 {% endraw %}
 
-3. Now, you can test if that is true by going to the first `Post` you have created previously using the Django shell. Go to that page through the URL.
+3. Now that you have a view and template for `post_detail`, you can now go back to the `post_list` template and make the Post titles link to the `post_detail` template. This line of code tells you that the `post_detail` view should be called when the link is clicked, passing to it the Post's primary key `pk`.
+{% raw %}
+	```html
+	<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+	```
+{% endraw %}
+
+4. Now, you can test if that is true by going to the first `Post` you have created previously using the Django shell. Go to that page through the index page.
 	><strong>Rendering post_detail template at</strong> `localhost:8000/post/1/`
 	![post_detail template 2]({{ site.baseurl }}/assets/img/django9.png)
 
-4. You can also try going to a non-existent post and you should see an error.
-	><strong>Rendering default error_404 template at</strong> `localhost:8000/post/20/` as there are no post with `id=20`.
+5. You can also try going to a non-existent post through the URL and you should see a 404 error.
+	><strong>Rendering default error_404 template at</strong> `localhost:8000/post/20/` as there are no post with `id=2`.
 	![error_404 template]({{ site.baseurl }}/assets/img/django10.png)
 
 <br><br>

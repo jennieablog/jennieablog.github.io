@@ -250,7 +250,7 @@ python manage.py createsuperuser
 ><strong>Screenshot 3.</strong> Django Admin Functionality
  ![django admin login page]({{ site.baseurl }}/assets/img/django3.png){: .width-100}
 
-<br><br><br>
+<br><br>
  
 ### 6. Use the Django shell to create a post.<a name="step6"></a>
 ***

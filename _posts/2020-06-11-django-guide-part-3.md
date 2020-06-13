@@ -57,7 +57,7 @@ These are the final features for your site: creating and editing blog posts. For
 ### 2. Link the form to its corresponding views and templates.<a name="step2"></a>
 ***
 
-Let's link the form to the last two views and templates, `post_new` and `post_edit`. Going back to our table from part two, both views handle two types of request: **GET** and **POST**. If the request is a **POST** request, then it contains the data submitted from the user. The `post_new` and `post_edit` views should get this data, create a new post through the Django form, and redirect it to the post page of the newly created or edited post. Otherwise, it should generate a new `PostForm` to be filled out and display the new post page.
+Let's link the form to the last two views and templates, `post_new` and `post_edit`. Going back to our table from part two, both views handle two types of request: **GET** and **POST**. If the request is a **POST** request, then it contains the data submitted from the user. The `post_new` and `post_edit` views should get this data, create or edit post through the Django form, and redirect it to the post page of the newly created or edited post. Otherwise, it should generate a new `PostForm` and render the new post page that has the form.
 
 <br>
 
@@ -77,12 +77,12 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 			form = PostForm(request.POST)
 			# Check validity of form.
 			if form.is_valid():
-			post = form.save(commit=False) # This returns a Post model.
-			post.author = request.user
-			post.published_date = timezone.now()
-			post.save()
-			# Redirect to the newly created post's page using post_detail view..
-			return redirect('post_detail', pk=post.pk)
+				post = form.save(commit=False) # This returns a Post model.
+				post.author = request.user
+				post.published_date = timezone.now()
+				post.save()
+				# Redirect to the newly created post's page using post_detail view..
+				return redirect('post_detail', pk=post.pk)
 
 		else:
 			# Initialize form.
@@ -168,14 +168,16 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 ### 3. Enable user authentication.<a name="step3"></a>
 ***
 
-You've now completed the blog's features. Now, let's think about restricting some of it. We couldn't let just anyone create new posts and edit previous posts in our site. We need to authenticate the user first. How do we restrict the use of these features?
+<br>
+
+You've now completed the blog's features. Now, think about restricting some of it. You couldn't let just anyone create new posts and edit previous posts on your site. You need to authenticate the user first. How do we restrict the use of these features?
 
 1. You already created your first user using `createsuperuser` from part one. What you need to do now is to set up the login page. First, add Django site authentication urls in `mysite/urls.py`.
 ```python
 path('accounts/', include('django.contrib.auth.urls')),
 ```
 
-2. The good thing with including `django.contrib.auth.urls`. is that Django will set things up for you which includes login, logout, and password management. The next thing that you have to do is to create a template for the login page. Create a new folder under the `templates/` folder named `registration/` and create a new file called `login.html`. Put this in it to create a simple login page.
+2. The good thing with including `django.contrib.auth.urls`. is that Django will set things up for you which include: login, logout, and password management. The next thing that you have to do is to create a template for the login page. Create a new folder under the `templates/` folder named `registration/` and create a new file called `login.html`. Put this in it to create a simple login page.
 {% raw %}
 	```html
 	{% if form.errors %}
@@ -220,7 +222,7 @@ TEMPLATES = [
 
 4. Next is to tell Django where to redirect after logging-in and out. Do that through adding this line in `settings.py`.
     ```python
-	# Redirect to home URL after login (Default redirects to /accounts/profile/)
+	# Redirect to home URL after login/logout (Default redirects to /accounts/profile/)
 	LOGIN_REDIRECT_URL = '/'
 	LOGOUT_REDIRECT_URL = '/'
     ```

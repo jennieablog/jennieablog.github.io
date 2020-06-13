@@ -303,7 +303,7 @@ You'd want to link those Post titles in the index page to their respective Post 
 	```
 {% endraw %}
 
-3. Now that you have a view and template for `post_detail`, you can now go back to the `post_list` template and make the Post titles link to the `post_detail` template. This line of code tells you that the `post_detail` view should be called when the link is clicked, passing to it the Post's primary key `pk`.
+3. Now that you have a view and template for `post_detail`, you can now go back to the `post_list` template and make the Post titles link to the `post_detail` template. This line of code tells you that link points to the `post_detail` path, which should call the `post_detail` view passing to it the Post's primary key `pk`, and finally rendering the `post_detail` template.
 {% raw %}
 	```html
 	<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>

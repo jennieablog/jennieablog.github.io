@@ -60,8 +60,9 @@ Using this guide, you should be able to create a simple blog web app with Django
 
 1. Create the Django form for the model.
 2. Link the form to its corresponding views and templates.
-3. Make the site navigation better.
-4. Create the base template for all templates.
+3. Enable user authentication.
+4. Make the site navigation better.
+5. Create the base template for all templates.
 
 [Part 4: Deploying your Django app]()
 

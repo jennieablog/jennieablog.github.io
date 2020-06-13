@@ -19,9 +19,8 @@ Absolutely stoked to see you here! This is **part three** of my [four-part guide
 
 1. [Create the Django form for the model.](#step1)
 2. [Link the form to its corresponding views and templates.](#step2)
-3. [Enable user authentication.](#step3)
-4. [Make the site navigation better.](#step4)
-5. [Create the base template for all templates.](#step5)
+3. [Make the site navigation better.](#step3)
+4. [Create the base template for all templates.](#step4)
 
 <br>
 
@@ -165,88 +164,7 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 
 <br><br>
 
-### 3. Enable user authentication.<a name="step3"></a>
-***
-
-You've now completed the blog's features. Now, let's think about restricting some of it. We couldn't let just anyone create new posts and edit previous posts in our site. We need to authenticate the user first. How do we restrict the use of these features?
-
-1. You already created your first user using `createsuperuser` from part one. What you need to do now is to set up the login page. First, add Django site authentication urls in `mysite/urls.py`.
-```python
-path('accounts/', include('django.contrib.auth.urls')),
-```
-
-2. The good thing with including `django.contrib.auth.urls`. is that Django will set things up for you which includes login, logout, and password management. The next thing that you have to do is to create a template for the login page. Create a new folder under the `templates/` folder named `registration/` and create a new file called `login.html`. Put this in it to create a simple login page.
-{% raw %}
-	```html
-	{% if form.errors %}
-	<p>Your username and password didn't match. Please try again.</p>
-	{% endif %}
-
-	{% if next %}
-		{% if user.is_authenticated %}
-		<p>Your account doesn't have access to this page. To proceed,
-		please login with an account that has access.</p>
-		{% else %}
-		<p>Please login to see this page.</p>
-		{% endif %}
-	{% endif %}
-
-	<form method="post" action="{% url 'login' %}">
-		{% csrf_token %}
-		<table>
-			<tr>
-			<td>{{ form.username.label_tag }}</td>
-			<td>{{ form.username }}</td>
-			</tr>
-			<tr>
-			<td>{{ form.password.label_tag }}</td>
-			<td>{{ form.password }}</td>
-			</tr>
-		</table>
-		<input type="submit" value="login" />
-		<input type="hidden" name="next" value="{{ next }}" />
-	</form>
-	```
-{% endraw %}
-
-3. Now you need update the `TEMPLATES` section in `mysite/settings.py` and put the template directory of your project to make all its templates visible to the template loader.
-```python
-TEMPLATES = [
-{
-	...
-	'DIRS': [os.path.join(BASE_DIR, 'templates')],
-	...
-```
-
-4. Next is to tell Django where to redirect after logging-in and out. Do that through adding this line in `settings.py`.
-    ```python
-	# Redirect to home URL after login (Default redirects to /accounts/profile/)
-	LOGIN_REDIRECT_URL = '/'
-	LOGOUT_REDIRECT_URL = '/'
-    ```
-
-5. Finally restrict some of the site's features. Go to `views.py`. Import `login_required` from `django.contrib.auth.decorators` and add the following line before `post_edit` and `post_new`.
-{% raw %}
-	```python
-	from django.contrib.auth.decorators import login_required
-		...
-	@login_required
-	def post_edit(request, pk):
-		...
-
-	@login_required
-	def post_new():
-		...
-	```
-{% endraw %}
-
-6. Okay, now try testing it through these URLs:
-    - `localhost:8000/accounts/login/`
-    - `localhost:8000/accounts/logout/`
-
-<br><br>
-
-### 4. Make the site navigation easier.<a name="step4"></a>
+### 3. Make the site navigation easier through Bootstrap.<a name="step3"></a>
 ***
 
 It would be best to add a **link to the new post page** in the index page. A link would suffice but let's try and make it look prettier. Let's make use of Bootstrap and add a navigation bar with a button for creating a new post at the home page, as well as a footer at the bottom of the page.
@@ -266,7 +184,7 @@ It would be best to add a **link to the new post page** in the index page. A lin
 	</head>
 	```
 
-2. To add a simple navbar, add the following code. Put the buttons linking to the new post page, login, and logout. If the user is logged in, provide buttons to create new post and to logout. Otherwise, provide a button for loggin in.
+2. To add a simple navbar, add the following code. Put the button linking to the new post page after the nav-header. Now, put the link within liquid tags with the format `url '<path_name>'`. Our path name in this case is `post_new`.
 {% raw %}
 	```html
 	<!-- Nav Bar -->
@@ -275,19 +193,10 @@ It would be best to add a **link to the new post page** in the index page. A lin
 		<div class="navbar-header">
 		<a class="navbar-brand" href="/">My Blog</a>
 		</div>
-		<!-- Add button here. -->
-		{% if user.is_authenticated %}
-			<a href="{% url 'logout' %}">
-			<button class="btn navbar-btn btn-danger navbar-right">Log Out</button>
-			</a>
-			<a href="{% url 'post_new' %}">
-			<button class="btn navbar-btn navbar-right">New Post</button>
-			</a>
-		{% else %}
-			<a href="{% url 'login' %}">
-			<button class="btn navbar-btn navbar-right">Log-in</button>
-			</a>
-		{% endif %}
+		<!-- Add button here. -->	
+		<a href="{% url 'post_new' %}">
+		 <button class="btn navbar-btn navbar-right">New Post</button>
+		</a>
 		</div>
 	</nav>
 	<!-- Nav Bar -->
@@ -311,7 +220,7 @@ It would be best to add a **link to the new post page** in the index page. A lin
 
 <br><br>
 
-### 5. Create the base template for all templates.<a name="step5"></a>
+### 4. Create the base template for all templates.<a name="step4"></a>
 ***
 
 Notice that it doesn't look good enough yet since the navbar is covering some elements. Also notice that if you click new post, the nav bar and footer disappears. To solve these issues, you will have to create a base template.
@@ -341,22 +250,14 @@ Notice that it doesn't look good enough yet since the navbar is covering some el
 			<div class="navbar-header">
 			<a class="navbar-brand" href="/">My Blog</a>
 			</div>
-			<!-- Add button here. -->
-			{% if user.is_authenticated %}
-				<a href="{% url 'logout' %}">
-				<button class="btn navbar-btn btn-danger navbar-right">Log Out</button>
-				</a>
-				<a href="{% url 'post_new' %}">
-				<button class="btn navbar-btn navbar-right">New Post</button>
-				</a>
-			{% else %}
-				<a href="{% url 'login' %}">
-				<button class="btn navbar-btn navbar-right">Log-in</button>
-				</a>
-			{% endif %}
+			<!-- Add button here. -->	
+			<a href="{% url 'post_new' %}">
+			<button class="btn navbar-btn navbar-right">New Post</button>
+			</a>
 			</div>
 		</nav>
 		<!-- Nav Bar -->
+
 
 		<!-- Content -->
 		<div class="content container" style="padding-top: 12rem">
@@ -401,19 +302,14 @@ Notice that it doesn't look good enough yet since the navbar is covering some el
 3. Click the New Post button or any post in the index page and you should  still see the nav bar and footer.
 	>><strong>Rendering new post_list with new base template</strong> `localhost:4000`
 	![post_list template x]({{ site.baseurl }}/assets/img/django14.png)
-
-4. Finally let's add an edit button to the posts just beside the post title. Again, this must only be available for logged-in users only. Go ahead and edit `post_detail.html`.
+4. Finally let's add an edit button to the posts just beside the post title. Go ahead and edit `post_detail.html`.
 {% raw %}
 	```html
 	{% extends 'blog/base.html' %}
 
 	{% block content %}
-	<h2>
-		{{ post.title }}
-		{% if user.is_authenticated %}
-			<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-		{% endif %}
-	</h2>
+	<h2>{{ post.title }}
+	<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
 		<div class="date">
 			{{ post.published_date }}
 		</div>

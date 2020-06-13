@@ -63,7 +63,7 @@ theme_settings :
     instagram:
 
   # Disqus
-  disqus_shortname : jennieablog
+  disqus_shortname : jennieablog-github-io
 
 # Pagination
 paginate: 10

@@ -5,7 +5,7 @@ subtitle : Creating the Django application interface
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
-final: true
+show: False
 author: Jennie Ablog
 comments : True
 ---
@@ -14,14 +14,22 @@ comments : True
 
 Hi, it's good to see you again! This is **part two** of my [four-part guide]({{ site.baseurl }}/2020/06/01/django-beginners-guide.html) for building a simple blog app using the Django web framework. Click [here]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html) to go back to part one in case you missed something.<br><br>
 
-## Outline
+### Outline
 ***
+
+[Part 1: Initializing your Django application]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html)
+
+**[Part 2: Creating the Django application interface](#)** ⬅️ You are here!
 
 1. [List the app's features.](#step1)
 2. [Set-up the URLs and initialize the views.](#step2)
 3. [Set-up the templates folder.](#step3)
 4. [Create the index page.](#step4)
 5. [Create the post page.](#step5)
+
+[Part 3: Getting data from Django forms]({{ site.baseurl }}/2020/06/11/django-guide-part-3.html)
+
+[Part 4: Deploying your Django app]({{ site.baseurl }}/2020/06/14/django-guide-part-4.html)
 
 <br>
 

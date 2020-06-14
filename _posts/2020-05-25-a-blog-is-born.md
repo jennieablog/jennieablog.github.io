@@ -5,7 +5,7 @@ subtitle : Creating a website in under an hour & hosting it for free
 tags: [jekyll, github-pages, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: true
-final: true
+show: True
 author: Jennie Ablog
 comments : True
 ---

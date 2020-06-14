@@ -7,7 +7,7 @@ image:
 displayimage: 
 author: Jennie Ablog
 comments : true
-final: true
+show: True
 ---
 
 ### Introduction

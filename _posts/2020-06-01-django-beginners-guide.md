@@ -5,7 +5,7 @@ subtitle : Complete guide for your first Django application
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
-final: True
+show: True
 author: Jennie Ablog
 comments : True
 ---
@@ -64,7 +64,12 @@ Using this guide, you should be able to create a simple blog web app with Django
 4. Make the site navigation better.
 5. Create the base template for all templates.
 
-[Part 4: Deploying your Django app]()
+[Part 4: Deploying your Django app]({{ site.baseurl }}/2020/06/14/django-guide-part-4.html)
+
+1. Set up Heroku.
+2. Set up static assets and database configuration.
+3. Create the heroku app.
+4. Configure the git repository within the project and deploy!
 
 
 <br>

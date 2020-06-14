@@ -5,7 +5,7 @@ subtitle : Initializing your Django application
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
-final: true
+show: False
 author: Jennie Ablog
 comments : True
 ---
@@ -14,8 +14,9 @@ comments : True
 
 Hey there! This is **part one** of my [four-part guide]({{ site.baseurl }}/2020/06/01/django-beginners-guide.html) for building a simple blog app using the Django web framework.<br><br>
 
-## Outline
+### Outline
 ***
+**[Part 1: Initializing your Django application](#)** ⬅️ You are here!
 
 1. [Set-up the development environment.](#step1)
 2. [Create the django project.](#step2)
@@ -24,11 +25,17 @@ Hey there! This is **part one** of my [four-part guide]({{ site.baseurl }}/2020/
 5. [Create a site administrator.](#step5)
 6. [Use the Django shell to create a post.](#step6)
 
+[Part 2: Creating the Django application interface]({{ site.baseurl }}/2020/06/10/django-guide-part-2.html)
+
+[Part 3: Getting data from Django forms]({{ site.baseurl }}/2020/06/11/django-guide-part-3.html)
+
+[Part 4: Deploying your Django app]({{ site.baseurl }}/2020/06/14/django-guide-part-4.html)
+
 <br>
 
 ### 1. Set-up the development environment.<a name="step1"></a>
 ***
-Before anything else, let's go ahead and set-up your development environment where you're going to install several things. If you're using a MacOS, just follow everything below. If not, there are instructions in the Django website for your OS.<br><br>
+Before anything else, let's go ahead and set-up your development environment where you're going to install several things. If you're using a MacOS, just follow everything below. If not, there are [instructions](https://docs.djangoproject.com/en/3.0/topics/install/) in the Django website for your OS.<br><br>
 
 1. Install the latest version of `python`. I use <a href="https://brew.sh/">Homebrew</a> for this installation.
 ```bash

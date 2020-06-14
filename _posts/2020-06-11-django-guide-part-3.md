@@ -5,7 +5,7 @@ subtitle : Getting data from Django forms
 tags: [django, tutorial]
 image: https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 displayimage: false
-final: true
+show: False
 author: Jennie Ablog
 comments : True
 ---
@@ -17,11 +17,19 @@ Absolutely stoked to see you here! This is **part three** of my [four-part guide
 ## Outline
 ***
 
+[Part 1: Initializing your Django application]({{ site.baseurl }}/2020/06/09/django-guide-part-1.html)
+
+[Part 2: Creating the Django application interface]({{ site.baseurl }}/2020/06/10/django-guide-part-2.html)
+
+**[Part 3: Getting data from Django forms](#)** ⬅️ You are here!
+
 1. [Create the Django form for the model.](#step1)
 2. [Link the form to its corresponding views and templates.](#step2)
 3. [Enable user authentication.](#step3)
 4. [Make the site navigation better.](#step4)
 5. [Create the base template for all templates.](#step5)
+
+[Part 4: Deploying your Django app]({{ site.baseurl }}/2020/06/14/django-guide-part-4.html)
 
 <br>
 
@@ -168,9 +176,9 @@ Let's link the form to the last two views and templates, `post_new` and `post_ed
 ### 3. Enable user authentication.<a name="step3"></a>
 ***
 
-<br>
-
 You've now completed the blog's features. Now, think about restricting some of it. You couldn't let just anyone create new posts and edit previous posts on your site. You need to authenticate the user first. How do we restrict the use of these features?
+
+<br>
 
 1. You already created your first user using `createsuperuser` from part one. What you need to do now is to set up the login page. First, add Django site authentication urls in `mysite/urls.py`.
 ```python
@@ -248,7 +256,7 @@ TEMPLATES = [
 
 <br><br>
 
-### 4. Make the site navigation easier.<a name="step4"></a>
+### 4. Make the site navigation better.<a name="step4"></a>
 ***
 
 It would be best to add a **link to the new post page** in the index page. A link would suffice but let's try and make it look prettier. Let's make use of Bootstrap and add a navigation bar with a button for creating a new post at the home page, as well as a footer at the bottom of the page.
@@ -432,5 +440,5 @@ Notice that it doesn't look good enough yet since the navbar is covering some el
 
 <br><br>
 
-#### Great job! 🥳 
-Hey, you're simply amazing for making it this far. By now you should be able to run a functional blog site. On the next and final part, you will finally see what you made live on the internet.
+## Great job! 🥳 
+Hey, you're simply amazing for making it this far. By now you should be able to run a functional blog site. On the next and final part, you will finally see what you made live on the internet. Click [here]({{ site.baseurl }}/2020/06/14/django-guide-part-4.html) to proceed!

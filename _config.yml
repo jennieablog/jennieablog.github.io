@@ -51,15 +51,15 @@ theme_settings :
 
   # Icons
   icons :
-    email:  jennieablog@gmail.com
+    email:  jsablog@up.edu.ph
     linkedin: https://www.linkedin.com/in/jennie-ron-ablog-489845143/
     github: jennieablog
     gitlab: 
     bitbucket: 
     google_plus:
-    twitter: jennironni
+    twitter: 
     youtube:
-    facebook: jennieablog
+    facebook: 
     instagram:
 
   # Disqus

@@ -7,12 +7,12 @@
     <img src="{{ site.baseurl }}/{{ profile.image }}" alt="jennie-ablog">
     </div>
     <span class="insidetooltiptext">
-      <strong>view my portfolio.</strong>
+      <strong>view my portfolio</strong>
     </span>
     </a>
   </div>
   <a class="title" href="#">
-    <h3>{{ profile.username }}</h3>
+    <h3>JENNIE ABLOG</h3>
   </a>
   <!-- <p class="username"><a href="#">{{ profile.username }}</a></p> -->
   <p class="description">{{ profile.description }}</p>
@@ -20,37 +20,37 @@
   <ul id="icons">
     {% include icons.html %}
   </ul>
-  
-  <!-- <a href="{{ site.url }}/portfolio"><span class="tag">GO TO MY PORTFOLIO ✨</span></a><br><br> -->
+</div>
 
+<!-- Project -->
+<div id="proj-wrap">
+  <a href="{{ site.url }}/portfolio#project">
+    <div class="tooltiptext">
+      <strong>working on it!</strong>
+    </div>
+  </a>
+  <hr class="proj-hr">
+  {% for _ in site.data.projects %}
+    {% assign project = _.project %}
+    {% if project.print %}
+      <div class="proj-content">
+        <div class="proj-title">{{ project.title }}</div>
+        <div class="meta">{{ project.date }}</div>
+      </div>
+      <hr class="proj-hr">
+    {% endif %}
+  {% endfor %}
 </div>
 
 <!-- Tag Navigation -->
 <div id="tag-wrap">
-  <a href="{{ site.url }}/tags">
-    <p class="title">Tags</p>
+<!--   <a href="{{ site.url }}/tags">
+    <h2 class="title">Tags</h2>
   </a>
-  {% for tag in site.tags %}
+ -->  {% for tag in site.tags %}
   <a href="{{site.baseurl}}/tags#{{ tag | first | cgi_encode }}">
     <span class="tag">{{ tag | first }}</span>
   </a>
   {% endfor %}
 </div>
 
-<!-- Project -->
-<div id="proj-wrap">
-  <a href="{{ site.url }}/portfolio#project">
-    <p class="title">Projects</p>
-    <hr class="proj-hr">
-  </a>
-    {% for _ in site.data.projects %}
-    {% assign project = _.project %}
-    {% if project.print %}
-    <div class="proj-content">
-      <div class="proj-title">{{ project.title }}</div>
-      <div class="meta">{{ project.date }}</div>
-    </div>
-    <hr class="proj-hr">
-    {% endif %}
-    {% endfor %}
-</div>

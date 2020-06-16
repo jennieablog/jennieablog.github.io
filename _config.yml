@@ -9,7 +9,7 @@ theme_settings :
 
   # Profile Settings
   profile :
-    image : assets/img/profile.jpg
+    image : assets/img/profile.png
     qrcode: assets/img/qr-code.png
     username : Jennie Ablog
     description : A BSc CS student who loves to teach herself a lot of stuff. 👩🏾‍💻

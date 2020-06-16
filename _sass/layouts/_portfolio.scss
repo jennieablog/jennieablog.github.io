@@ -91,6 +91,20 @@
           .description {
             font-size: 1rem;
           }
+          .available {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+          }
+        }
+        li.metalast{
+          color: #4CAF50;
+          padding-bottom: 0px;
         }
         li.meta::before {
           content: "";
@@ -100,6 +114,16 @@
           top: 42%;
           left: -10px;
           background-color: $theme-color;
+          border-radius: 50%;
+        }
+        li.metalast::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: 80%;
+          left: -10px;
+          background-color: #4CAF50;
           border-radius: 50%;
         }
       }
@@ -165,5 +189,22 @@
         }
       }
     }
+  }
+    /* Tooltip text */
+  .tooltip .tooltiptext {
+    width: 180px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    border-radius: 0px 0px 10px 10px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -6%;
+    left: 50%;
+    margin-left: -90px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
   }
 }

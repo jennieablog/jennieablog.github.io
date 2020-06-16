@@ -44,13 +44,15 @@
 
 <!-- Tag Navigation -->
 <div id="tag-wrap">
-<!--   <a href="{{ site.url }}/tags">
-    <h2 class="title">Tags</h2>
-  </a>
- -->  {% for tag in site.tags %}
+
+  {% for tag in site.tags %}
   <a href="{{site.baseurl}}/tags#{{ tag | first | cgi_encode }}">
     <span class="tag">{{ tag | first }}</span>
   </a>
   {% endfor %}
+  <br><br>
+  <a href="https://twitter.com/hashtag/BlackLivesMatter"><span class="tag" style="background: black;">✊🏾</span></a>
+  <a href="https://twitter.com/hashtag/JunkTerrorBill"><span class="tag" style="background: black;">🗑️</span></a>
+  <a href="https://twitter.com/hashtag/PrideMonth2020"><span class="tag" style="background: black;">🏳️‍🌈</span></a>
 </div>
 

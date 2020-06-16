@@ -202,9 +202,10 @@
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
-    bottom: -6%;
+    bottom: -3%;
     left: 50%;
     margin-left: -90px; /* Use half of the width (120/2 = 60), to center the tooltip */
 
   }
+
 }

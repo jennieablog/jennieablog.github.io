@@ -8,8 +8,11 @@ layout: page
   <section id="about-me">
     <div class="row">
       <div class="img-wrap col-12 col-md-4">
-        <div class="img">
-          <img src="{{ site.baseurl }}/{{ profile.image }}" alt="user_image">
+        <div class="img tooltip">
+          <a href="{{ site.url}}/resume">
+              <img src="{{ site.baseurl }}/{{ profile.qrcode }}" alt="user_image">
+              <div class="tooltiptext"><strong>MY RESUME</strong></div>
+          </a>
         </div>
       </div>
       <div class="text-wrap col-12 col-md-8">

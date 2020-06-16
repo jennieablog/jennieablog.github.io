@@ -1,10 +1,17 @@
 <!-- User Profile -->
 <div id="profile">
   {% assign profile = site.theme_settings.profile %}
-  <div class="img-wrap">
+  <div class="insidetooltip">
+    <a href="{{ site.baseurl }}/portfolio">
+    <div class="img-wrap">
     <img src="{{ site.baseurl }}/{{ profile.image }}" alt="jennie-ablog">
+    </div>
+    <span class="insidetooltiptext">
+      <strong>view my portfolio.</strong>
+    </span>
+    </a>
   </div>
-  <a class="title" href="{{ site.url }}/portfolio">
+  <a class="title" href="#">
     <h3>{{ profile.username }}</h3>
   </a>
   <!-- <p class="username"><a href="#">{{ profile.username }}</a></p> -->
@@ -32,7 +39,7 @@
 
 <!-- Project -->
 <div id="proj-wrap">
-  <a href="{{ site.url }}/portfolio">
+  <a href="{{ site.url }}/portfolio#project">
     <p class="title">Projects</p>
     <hr class="proj-hr">
   </a>

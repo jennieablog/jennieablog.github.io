@@ -179,3 +179,81 @@ code {
 span.nb {
 	font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 }
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.textlabel {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  max-width: 300px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: #51407A;
+  background: rgba(81, 64, 122, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.textlabel:hover .overlay {
+  opacity: 1;
+}
+
+/* Tooltip container */
+.insidetooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.insidetooltip .insidetooltiptext {
+  opacity: 0;
+  width: 200px;
+  background-color: #51407A;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 10px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 50%;
+  margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+  transition: opacity 0.5s;
+
+}
+
+.insidetooltip:hover .insidetooltiptext {
+  opacity: 1;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  width: 180px;
+  background-color: #7740AA;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 0px 0px 10px 10px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: -6%;
+  left: 50%;
+  margin-left: -90px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+}

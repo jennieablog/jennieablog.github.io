@@ -148,7 +148,7 @@ a:link, a:visited, a:active, a:hover {
 }
 #error404{
 	@extend %page-padding;
-	margin-top : 200px;
+	margin : 5%;
 	text-align: center;
 
 	.return-btn {

@@ -1,53 +1,8 @@
 ---
-layout: default
+layout: page
 ---
-{% assign _url = page.url | split: "/" %}
-{% assign current = _url[-1] | split: "." %}
-<header style="margin-bottom: 52px;">
-  <nav>
-    <ul>
-      {% case current[0] %}
-      {% when 'tags'%}
-      <!-- tags -->
-      <a href="{{ site.url }}">
-        <li class="current btn-nav">Blog</li>
-      </a>
-      <a href="{{ site.url}}/portfolio">
-        <li class="btn-nav">Portfolio</li>
-      </a>
-      <!-- portfolio -->
-      {% when 'portfolio'%}
-      <a href="{{ site.url }}">
-        <li class="btn-nav">Blog</li>
-      </a>
-      <a>
-        <li class="current">Portfolio</li>
-      </a>
-      <!-- resume -->
-      {% when 'resume'%}
-      <a href="{{ site.url }}">
-        <li class="btn-nav">Blog</li>
-      </a>
-      <a href="{{ site.url }}/portfolio">
-        <li class="btn-nav">Portfolio</li>
-      </a>
-      <a href="{{ site.url }}/Jennie Ablog's Resume 2020.pdf" download="Jennie Ablog's Resume" class="tag" style="color: white;">
-        <i class="fas fa-file-download"></i>&nbsp;&nbsp;&nbsp;DOWNLOAD
-      </a>
-      {% else %}
-      <!-- others -->
-      <a href="{{ site.url }}">
-        <li class="current btn-nav">Blog</li>
-      </a>
-      <a href="{{ site.url }}/portfolio">
-        <li class="btn-nav">Portfolio</li>
-      </a>
-      {% endcase %}
-    </ul>
-  </nav>
-</header>
 {% assign profile = site.theme_settings.profile %}
-.
+
 </div><!-- This Tag means End .container -->
 <div id="protfolio">
   <section id="about-me">
@@ -130,5 +85,3 @@ layout: default
 
   {% include projects.html %}
 </div>
-
-{% include footer.html %}

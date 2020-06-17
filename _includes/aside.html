@@ -13,11 +13,12 @@
   </div>
   <a class="title" href="{{ site.baseurl }}/portfolio">
     <h3>{{ profile.username }}</h3>
+
   </a>
   <p class="description">{{ profile.description }}</p>
 
   <!-- Social icons from Font Awesome -->
-  <ul id="icons">
+  <ul id="icons" style="color: white;">
     {% include icons.html %}
   </ul>
 </div>
@@ -41,6 +42,8 @@
     {% endif %}
   {% endfor %}
 </div>
+
+
 
 <!-- Tag Navigation -->
 <div id="tag-wrap">

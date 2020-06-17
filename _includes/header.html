@@ -40,6 +40,13 @@
         <li class="btn-nav">Portfolio</li>
       </a>
       {% endcase %}
+      <li style="float: right;">
+        <label class="switch" for="darkSwitch">
+        <input type="checkbox" id="darkSwitch">
+        <span class="slider round"></span>
+        </label>
+        <script type="text/javascript" src="{{ '/assets/js/dark-mode-switch.min.js' | relative_url }}"></script>
+      </li>
     </ul>
   </nav>
 </header>

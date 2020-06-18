@@ -12,7 +12,7 @@ comments : True
 
 <!-- INTRO -->
 
-I use the following codes when I'm testing local scripts and css files from my laptop on websites through the browser console. Although, they may also be used to import said files from other servers. Wrote this blog entry to keep the code for copy-pasta purposes.
+I use the following codes on the browser console when I'm testing local js and css files on websites. May also be used to import said files from other servers. Wrote this blog entry to keep the code for copy-pasta purposes.
 
 <br>
 

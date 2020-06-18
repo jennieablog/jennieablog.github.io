@@ -12,7 +12,8 @@ theme_settings :
     image : assets/img/profile.png
     qrcode: assets/img/qrcode.png
     username : Jennie Ablog
-    description : A BSc CS student who loves to teach herself a lot of stuff. 👩🏾‍💻
+    description: BSc Computer Science student from UP Diliman 🇵🇭
+    blog_description : I'm here to learn new things and make puns.
     experience :
       - start : "June 2017 "
         end: "August 2017"

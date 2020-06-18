@@ -20,7 +20,21 @@
             <li>JASigning Applet</li>
             <li>ESign Editor</li>
             <li>Flask</li>
+- project :
+    print : False # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    website : https://jennieablog.github.io/rotc_enlistment_monitoring
+    url : https://github.com/jennieablog/rotc_enlistment_monitoring # Full URL
+    date : 2018.08.02
+    title : ROTC Enlistment Status Checker
+    summary: CRS Results Monitoring Tool
+    description : "A browser bookmark that checks that status of ROTC enlistment from the CRS search results for NSTP"
 
-
-
- 
+- project :
+    print : False # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    website: https://sarappsaup.herokuapp.com
+    date : 2017.09 - 2018.04
+    title : SARAPP sa UP
+    summary: Search and Rate Application for food places in UP Diliman
+    description : "A web application for searching and rating food places around UP Diliman"

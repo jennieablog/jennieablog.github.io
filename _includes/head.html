@@ -33,8 +33,8 @@
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ page.subtitle }}" />
   <meta property="og:type" content="website, blog" />
- <!--  <meta property="og:image"
-    content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.theme_settings.profile.image }}{% endif %}" /> -->
+  <meta property="og:image"
+    content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.theme_settings.profile.image }}{% endif %}" />
   <meta property="og:image"
     content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.theme_settings.profile.image }}{% endif %}" />
   <meta property="og:site_name" content="{{ site.theme_settings.title }}" />
@@ -43,10 +43,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{{ title }}" />
   <meta name="twitter:description" content="{{ page.subtitle }}" />
-<!--   <meta name="twitter:image"
-    content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.theme_settings.profile.image }}{% endif %}" /> -->
   <meta name="twitter:image"
     content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.theme_settings.profile.image }}{% endif %}"" />
-
   <title>{{ title }}</title>
 </head>

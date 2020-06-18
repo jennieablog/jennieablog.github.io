@@ -194,8 +194,13 @@ span.nb {
 		color: white !important;
 	}
 
-	a:link{
-		color: #8877FF !important;
+	#post {
+		a:link, a:visited {
+			color: #BB78FF !important;
+		}
+		ul li:before {
+			background-color: grey !important;
+		}
 	}
 
 	#post blockquote {
@@ -229,7 +234,7 @@ span.nb {
 	
 	#protfolio #career {
 		.title {
-			color: #8877FF !important;
+			color: #BB78FF !important;
 		}
 		.exper ul.exper-list li.meta {
 			.description{
@@ -244,7 +249,7 @@ span.nb {
 
 	#project .project-wrap {
 		p.title {
-			color: #8877FF !important;
+			color: #BB78FF !important;
 		}
 	}
 
@@ -252,7 +257,7 @@ span.nb {
 		background-color: $theme-dark2 !important;
 		.text-wrap {
 			.date{
-				color: #8877FF !important;
+				color: #BB78FF !important;
 			}
 			.title {
 				color: white !important;
@@ -325,11 +330,11 @@ span.nb {
 }
 
 input:checked + .slider {
-  background-color: #8877FF;
+  background-color: #BB78FF;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #8877FF;
+  box-shadow: 0 0 1px #BB78FF;
 }
 
 input:checked + .slider:before {

@@ -28,9 +28,7 @@
       <a href="{{ site.url }}/portfolio">
         <li class="btn-nav">Portfolio</li>
       </a>
-      <a href="{{ site.url }}/Jennie Ablog's Resume 2020.pdf" download="Jennie Ablog's Resume" class="tag" style="color: white;">
-        <i class="fas fa-file-download"></i>&nbsp;&nbsp;&nbsp;DOWNLOAD
-      </a>
+      <li class="current"><strong>Resume</strong></li>
       {% else %}
       <!-- others -->
       <a href="{{ site.url }}">
@@ -40,13 +38,6 @@
         <li class="btn-nav">Portfolio</li>
       </a>
       {% endcase %}
-      <li style="float: right;">
-        <label class="switch" for="darkSwitch">
-        <input type="checkbox" id="darkSwitch">
-        <span class="slider round"></span>
-        </label>
-        <script type="text/javascript" src="{{ '/assets/js/dark-mode-switch.min.js' | relative_url }}"></script>
-      </li>
     </ul>
   </nav>
 </header>

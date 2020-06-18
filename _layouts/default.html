@@ -3,6 +3,13 @@
 {% include head.html %}
 <body>
   <div class="container">
+  	<div id="lightswitch">
+		<label class="switch" for="darkSwitch" style="float: right; margin-top: 10px;">
+			<input type="checkbox" id="darkSwitch">
+			<span class="slider round"></span>
+		</label>
+		<script type="text/javascript" src="{{ '/assets/js/dark-mode-switch.min.js' | relative_url }}"></script>
+	</div>
     {{ content }}
   </div>
 </body>

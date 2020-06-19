@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body style="visibility: hidden;" onload="js_Load()">
+<body>
   <div class="container">
   	<div id="lightswitch">
 		<label class="switch" for="darkSwitch" style="float: right; margin-top: 10px;">
-			<input type="checkbox" id="darkSwitch">
+			<input type="checkbox" id="darkSwitch" onclick="myFunction()">
 			<span class="slider round"></span>
 		</label>
 		<script type="text/javascript" src="{{ '/assets/js/dark-mode-switch.min.js' | relative_url }}"></script>
 	</div>
     {{ content }}
   </div>
-  <noscript><style>body { visibility: visible; }</style></noscript>
 </body>
 
 </html>

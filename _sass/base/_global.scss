@@ -179,39 +179,29 @@ span.nb {
 	font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 }
 
+[data-theme="prior"] {
+	background-color: #323247 !important;
+	color: #eee !important;
+}
+
 
 [data-theme="dark"] {
 	background-color: #323247 !important;
 	color: #eee !important;
 
-	.highlighter-rouge{
-		color: #ff51a3 !important;
-		background-color: transparent !important;
+	/* BLOG */
+
+	#aside{
+		color: #eee !important;
 	}
-
-
-	a:link, a:visited, a:active, a:hover {
-		color: white !important;
+	#posts a:link, a:visited, a:active, a:hover {
+		color: #eee !important;
 	}
-
-	#post {
-		a:link, a:visited {
-			color: #BB78FF !important;
-		}
-		ul li:before {
-			background-color: grey !important;
-		}
-	}
-
-	#post blockquote {
-		color: #fff !important;
-	}
-
 
 	.post:hover{
 		.text-warp {
                 .title{
-                    color: white !important;
+                    color: #eee !important;
                 }
                 .title::before {
                     background-color: $theme-color;
@@ -229,60 +219,35 @@ span.nb {
 	}
 	.tag-sm:hover {
 		background-color: $theme-color;
-		color: #fff !important;
+		color: #eee !important;
 	}
 	
-	#protfolio #career {
-		.title {
+	#aside #proj-wrap .proj-content:hover *{
+            color: #CC51a3 !important;
+    }
+
+    #tags .tag-group .items .item .title {
+    	color: #eee !important;
+    }
+
+	/* POST */
+
+	#post {
+		color: #eee !important;
+		a:link, a:visited {
 			color: #BB78FF !important;
 		}
-		.exper ul.exper-list li.meta {
-			.description{
-				color: #fff !important;
-			}
-			.date{
-				color: white;
-			}
+		ul li:before {
+			background-color: grey !important;
 		}
-
-	}
-
-	#project .project-wrap {
-		p.title {
-			color: #BB78FF !important;
+		blockquote {
+			color: #eee !important;
 		}
 	}
 
-	#project .card-container .card-wrapper .card {
-		background-color: $theme-dark2 !important;
-		.text-wrap {
-			.date{
-				color: #BB78FF !important;
-			}
-			.title {
-				color: white !important;
-			}
-		}
-
-	}
-
-	.modal .modal-content{
-		background-color: #323247 !important;
-		.header .date {
-			color: grey;
-		}
-	}
-
-
-	#icons{
-	i{
-		background-color: $theme-color;
-		color : white;
-	}
-		i:hover {
-			background-color: $theme-dark;
-			color : #fff;
-		}
+	.highlighter-rouge{
+		color: #ff51a3 !important;
+		background-color: transparent !important;
 	}
 
 	#disqus_thread {
@@ -296,17 +261,76 @@ span.nb {
 		border: none;
 	}
 
-	footer .footer {
-		border: none;
+	/* PORTFOLIO */
+
+	#protfolio #career {
+		.title {
+			color: #BB78FF !important;
+		}
+		.exper ul.exper-list li.meta {
+			.description{
+				color: #eee !important;
+			}
+			.date{
+				color: #eee !important;
+			}
+		}
+
 	}
 
-	#aside #proj-wrap .proj-content:hover *{
-            color: #CC51a3 !important;
-    }
+	#project .project-wrap {
+		color: #eee !important;
+		p.title {
+			color: #BB78FF !important;
+		}
+	}
 
-    #tags .tag-group .items .item .title {
-    	color: white !important;
-    }
+	#project .card-container .card-wrapper .card {
+		background-color: $theme-dark2 !important;
+		.text-wrap {
+			.date{
+				color: #BB78FF !important;
+			}
+			.title {
+				color: #eee !important;
+			}
+		}
+
+	}
+
+	.modal .modal-content{
+		background-color: #323247 !important;
+		.header .date {
+			color: grey;
+		}
+	}
+
+	#icons{
+	i{
+		background-color: $theme-color;
+		color : #eee;
+	}
+		i:hover {
+			background-color: $theme-dark;
+			color : #eee;
+		}
+	}
+
+	#project .card-container .card-wrapper .card .icons a{
+		color: #ccc !important;
+	}
+
+	/* FOOTER */
+
+	footer {
+		color: #eee !important;
+		.footer {
+			border: none;
+		}
+		a {
+			color: $theme-color !important;
+		}
+	}
 
 }
 
@@ -347,7 +371,7 @@ span.nb {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #eee;
   -webkit-transition: .4s;
   transition: .4s;
 }

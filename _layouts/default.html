@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body>
+<body style="visibility: hidden;" onload="js_Load()">
   <div class="container">
   	<div id="lightswitch">
 		<label class="switch" for="darkSwitch" style="float: right; margin-top: 10px;">
@@ -12,6 +12,7 @@
 	</div>
     {{ content }}
   </div>
+  <noscript><style>body { visibility: visible; }</style></noscript>
 </body>
 
 </html>

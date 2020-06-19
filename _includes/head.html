@@ -1,27 +1,12 @@
 <head>
-  <script type="text/javascript">
-  if (localStorage.getItem("darkSwitch")==="dark") {
-    document.documentElement.setAttribute("data-theme","dark");
-  }
-  else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  function myFunction(){
-    if (localStorage.getItem("darkSwitch")==="dark") {
-      document.documentElement.removeAttribute("data-theme")
-      localStorage.setItem("darkSwitch",null);
-      console.log("Turn on.")
-    }
-    else {
-      document.documentElement.setAttribute("data-theme","dark");
-      localStorage.setItem("darkSwitch","dark");
-      console.log("Turn off.")
-    }
-  }
-  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Theme Switcher JS -->
+  <script type="text/javascript" src="{{ '/assets/js/theme-switcher.js' | relative_url }}"></script>
+
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" type="image/x-icon">
 
@@ -35,15 +20,13 @@
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <!-- JS -->
-  <script type="text/javascript" src="https://unpkg.com/darkreader@4.9.10/darkreader.js"></script>
-
   <!-- OG Tag -->
   {% if page.title %}
   {% assign title = site.theme_settings.title | append: " | " | append: page.title %}
   {% else %}
   {% assign title = site.theme_settings.title %}
   {% endif %}
+  
   <meta name="title" content="{{ title }}" />
   <meta name="author" content="{{ site.theme_settings.profile.username }}" />
   <meta name="keywords" content="{{ page.tags | join: ',' }}" />
@@ -65,5 +48,8 @@
   <meta name="twitter:description" content="{{ page.subtitle }}" />
   <meta name="twitter:image"
     content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.theme_settings.profile.image }}{% endif %}"" />
+  
+  <!-- Title -->
   <title>{{ title }}</title>
+
 </head>

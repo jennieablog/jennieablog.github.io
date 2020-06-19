@@ -2,13 +2,14 @@
 <html lang="en">
 {% include head.html %}
 <body>
+<!-- document.getElementById("theme-switch").checked = localStorage.getItem("grape-color")==="dark" -->
   <div class="container">
-  	<div id="lightswitch">
-		<label class="switch" for="darkSwitch" style="float: right; margin-top: 10px;">
-			<input type="checkbox" id="darkSwitch" onclick="myFunction()">
+  	<div>
+		<label class="switch" for="theme-switch" style="float: right; margin-top: 10px;">
+			<input type="checkbox" id="theme-switch" onclick="changeGrape()">
 			<span class="slider round"></span>
 		</label>
-		<script type="text/javascript" src="{{ '/assets/js/dark-mode-switch.min.js' | relative_url }}"></script>
+		<script type="text/javascript" src="{{ '/assets/js/toggle.js' | relative_url }}"></script>
 	</div>
     {{ content }}
   </div>

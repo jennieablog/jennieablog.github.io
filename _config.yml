@@ -10,6 +10,7 @@ theme_settings :
   # Profile Settings
   profile :
     image : assets/img/profile.png
+    logo : assets/logo.png
     qrcode: assets/img/qrcode.png
     username : Jennie Ablog
     description: BSc Computer Science student from UP Diliman 🇵🇭

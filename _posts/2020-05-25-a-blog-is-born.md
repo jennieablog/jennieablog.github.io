@@ -3,7 +3,7 @@ layout: post
 title: A blog is born 👶
 subtitle : Creating a website in under an hour & hosting it for free
 tags: [jekyll, github-pages, tutorial]
-image: http://media02.hongkiat.com/jekyll-github-pages/octojekyll-cover.jpg
+image: https://pixabay.com/get/5fe2d14a4852b10ff3d89960c62d3e7c133ad9e65556_640.jpg
 displayimage: false
 show: True
 author: Jennie Ablog

@@ -2,8 +2,8 @@
 layout: post
 title: Let there be 'dark' 🌗
 subtitle : Creating a dark theme switch for a static site generator
-tags: [javascript, css, jekyll]
-image: https://avatars2.githubusercontent.com/u/38494721?s=400&v=4
+tags: [dark-theme, javascript, css, jekyll, fouc]
+image: https://pixabay.com/get/57e3dd454d5bac14f1dc8460da2932771739dbe2575179_640.png
 displayimage: false
 show: True
 author: Jennie Ablog

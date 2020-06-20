@@ -9,7 +9,7 @@ theme_settings :
 
   # Profile Settings
   profile :
-    image : assets/img/profile.png
+    image : assets/img/profile.jpg
     logo : assets/logo.png
     qrcode: assets/img/qrcode.png
     username : Jennie Ablog

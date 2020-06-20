@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Let there be 'dark' 🌗
-subtitle : Putting a dark theme switch on a static site generator like Jekyll
+subtitle : Creating a dark theme switch for a static site generator
 tags: [javascript, css, jekyll]
-image: https://ixxidesign.azureedge.net/media/1016694/StarWars-DarthVader.jpg
+image: https://avatars2.githubusercontent.com/u/38494721?s=400&v=4
 displayimage: false
 show: True
 author: Jennie Ablog
@@ -308,4 +308,4 @@ In summary, here is how I implemented my dark theme switch. 💁🏽
 
 <br><br>
 
-And that's how I made my dark theme switch. You can use my code any time to add a dark theme switch to your own site, static or not. If you have questions or if you see any bugs, please comment them below!
+And that's how I made my dark theme switch. You can use my code any time to add a dark theme switch to your own site. If you have questions or see bugs, please comment them below!

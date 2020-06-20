@@ -12,7 +12,7 @@ comments : True
 
 <!-- INTRO -->
 
-I recently put up a dark theme switcher on this site. You can find it on the upper right corner of the page. I wrote this to share what's behind it and what other things you can try do with this switch. I talk for a while about how I came up with my code, but if you want to skip the back story, you can [click here for a TL;DR](#tldr).
+I recently put up a dark theme switch on this site. You can find it on the upper right corner of the page. I wrote this to share what's behind it and what other things you can try do with this switch. I talk for a while about how I came up with my code, but if you want to skip the back story, you can [click here for a TL;DR](#tldr).
 
 <br><br>
 
@@ -20,7 +20,7 @@ I recently put up a dark theme switcher on this site. You can find it on the upp
 ## Using dark reader
 ***
 
-My fascination with using a switch to change between light and dark modes while browsing the web started when I installed [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh) on my browser. The extension inverts the colors of web pages and aims to reduce eyestrain. It was pretty useful for me because it lets me adjust what kind of colors I see on my browser depending on how I like them to be. I usually prefer dark colors because they are easier on my eyes, but they can get hard to read when at a place with so much sunlight like on parks and in cafes. I love working indoors, but I also love working outside where the sun shines. With that, it really was convenient to always have this extension. Thing is, when I switch to other devices without Dark Reader, this amazing feature disappears. There are a few sites offering dark themes like Twitter but it isn't really easy to flick the switch as with Dark Reader. I'd like to solve that problem on my personal blog site. Yes, **here**. At first, I wanted to try  putting a Dark Reader switch ON it, so I went to Dark Reader's github repo and grabbed the JavaScript from there, and did the following.<br><br>
+My fascination with using a switch to change between light and dark modes while browsing the web started when I installed [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh) on my browser. The extension inverts the colors of web pages and aims to reduce eyestrain. It was pretty useful for me because it lets me adjust what kind of colors I see on my browser depending on how I like them to be. I usually prefer dark colors because they are easier on my eyes, but they can get hard to read when at a place with so much sunlight like on parks and in cafes. I love working indoors, but I also love working outside where the sun shines. With that, it really was convenient to always have this extension. Thing is, when I switch to other devices without Dark Reader, this amazing feature disappears. There are a few sites offering dark themes like Twitter but it isn't really easy to flick the switch as with Dark Reader. I'd like to solve that problem on my personal blog site. At first, I wanted to try  putting a Dark Reader switch on it, so I went to Dark Reader's [github repo](https://github.com/darkreader/darkreader) and grabbed the JavaScript from there, and did the following:<br><br>
 
 1. I included it in the head of my site.
 
@@ -111,23 +111,23 @@ Okay so I already have the switch. The thing is, when I navigate to other pages 
 ## Switching over to the 'dark-mode-switch'
 ***
 
-The Dark Reader switch worked. The effect looked pretty decent at the start, but I figured it really didn't work so well with my theme's color scheme. So I looked for ways where I could define my preferred "dark" colors. I came across the [Dark Mode Switch]() on GitHub. I figured I could use a toggle instead of a checkbox instead for it to look prettier. I got rid of the Dark Reader code and tried Dark Switcher instead. Here's how I did it according to the website.
+The Dark Reader switch worked. The effect looked pretty decent at the start, but I figured it really didn't work so well with my theme's color scheme. So I looked for ways where I could define my preferred "dark" colors. I came across the [Dark Mode Switch](https://coliff.github.io/dark-mode-switch/) on GitHub. From it, I figured I could use a toggle switch instead of a checkbox instead. I got rid of my Dark Reader code and tried this new `dark-mode-switch` instead. Here's how I did it according to the website:
 
 <br>
 
-1. I loaded bootstrap CSS for the toggle switch to work.
+1. I loaded the Bootstrap CSS for the toggle switch to work as intended.
 
     ```jsx
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     ```
 
-2. Downloaded the Dark Mode Switch JS to my `assets/js/` which for me, looked like a hideous line of code.
+2. I downloaded the `dark-mode-switch` JS to my `assets/js/`. For me, it looked like a hideous line of code.
 
     ```jsx
     const darkSwitch=document.getElementById("darkSwitch");function initTheme(){const e=null!==localStorage.getItem("darkSwitch")&&"dark"===localStorage.getItem("darkSwitch");darkSwitch.checked=e,e?document.body.setAttribute("data-theme","dark"):document.body.removeAttribute("data-theme")}function resetTheme(){darkSwitch.checked?(document.body.setAttribute("data-theme","dark"),localStorage.setItem("darkSwitch","dark")):(document.body.removeAttribute("data-theme"),localStorage.removeItem("darkSwitch"))}window.addEventListener("load",()=>{darkSwitch&&(initTheme(),darkSwitch.addEventListener("change",()=>{resetTheme()}))});
     ```
 
-3. I inserted this on my site's html.
+3. I inserted this on my site's html. This is the bootstrap toggle switch.
 
     ```html
     <div class="custom-control custom-switch">
@@ -137,7 +137,7 @@ The Dark Reader switch worked. The effect looked pretty decent at the start, but
     <script src="dark-mode-switch.min.js"></script>
     ```
 
-4. Finally, I added the basic example of the dark theme in my CSS.
+4. Finally, I added the basic example of the dark theme in my CSS which I will have to make additions to later on.
 
     ```css
     [data-theme="dark"] {
@@ -151,27 +151,27 @@ The Dark Reader switch worked. The effect looked pretty decent at the start, but
 ## My issues with the 'dark-mode-switch'
 ***
 
-It worked but not the way I wanted it to. I have a few issues with the dark-mode-switch which are due to my personal preferences by the way, and not because it's buggy. I state them below along with the improvisations I made to solve these issues.
+It worked, sadly not the way I wanted it to. I have a few issues with the `dark-mode-switch` which are due to my personal preferences by the way, and not because it's buggy. I state them below along with the improvisations I made to solve these issues.
 
 <br>
 
 ### Issue # 1: FOUC
-While I was playing with the Dark Switcher, I noticed that whenever I navigate to other pages, there is a white flash just before the page is loaded as it went from white background to the dark one. I personally didn't like how that played out so I searched about it and learned about **Flash of Unstyled Content** or **FOUC**. I found out that, because I was using a static site generator i.e. Jekyll, I can only apply my preferred theme once a small piece of Javascript executes to determine and set the theme, which results in the delay that causes the flash. I figured the problem was that the preferred theme applies to the html.body element, not the html element itself. So while waiting for the html.body to finish loading and finally be displayed, a blank html with white background (default) is displayed for a few milliseconds.
+While I was playing with my new `dark-modde-switch`, I noticed that whenever I navigate to other pages, there is a white flash just before the page is loaded as it went from white to the darker background color. I personally didn't like how that played out, so I searched about it and learned about **Flash of Unstyled Content** or **FOUC**. I found out that, because I was using a static site generator i.e. Jekyll, I can only apply my preferred theme once a small piece of Javascript executes to determine and set the theme, which results in the delay that causes the flash. I figured the problem was that the preferred theme applies to the `html.body` element, not the `html` element itself. So while waiting for the `html.body` to finish loading and finally be displayed, a blank `html` with white background (default) is displayed for a few milliseconds.
 
-##### Solution: Apply theme to HTML element.
-The solution was to apply the theme to the html element itself and load whatever js I have for theme-switching at the html head so it executes sooner as the page content is loading. I figured I needed to edit the JS, which this leads to my next and final issue...
+##### Solution: Apply theme to the HTML element itself.
+The solution was to apply the theme to the `html` element itself and load whatever JavaScript I have for theme-switching at the html head so it executes sooner as the page content is loading. I figured I needed to edit the JavaScript, which this leads to my next and final issue...
 
 <br>
 
 ### Issue # 2: Readability of code
-To be honest, I cannot make 100% sense of the Dark Switcher code, because my JS skills are not that great and I'm not a fan of long one-liner codes. Although I believe I could possibly understand it when I put in the effort, I trust that I can write readable code from scratch instead for quicker results. Besides, I think I now fully understand the concept going on behind the switch.
+To be honest, I cannot make 100% sense of the Dark Switcher code, because my JS skills are not that great and I'm not a fan of long one-liner codes. Although I believe I could possibly understand it when I put in the time and effort, I trust that I can write more readable code from scratch instead and get quicker results. Besides, I now fully understand the logic behind the switch.
 
 ##### Solution: Write my own code.
-I decided to **get rid of dark switcher js all together and write my own readable switcher code** which I describe in the next and final portion of this blog post below.
+I decided to **get rid of `dark-mode-switch` js altogether and write my own readable theme switch code** which I describe in the next and final portion of this blog post below.
 
 <br><br><a id="tldr"></a>
 
-# SUMMARY
+# Coding my theme switch
 ***
 In summary, here is how I implemented my dark theme switch. 💁🏽
 
@@ -179,7 +179,7 @@ In summary, here is how I implemented my dark theme switch. 💁🏽
 
 ### 1. Writing the CSS
 
-1. I defined a `data-theme` using dark colors in my site's CSS and named it `dark`. This will be added as an attribute to the `html` element whenever the switch is toggled. Shown below is a basic dark theme example because my actual CSS is [too long]().
+1. I defined a `data-theme` with dark colors in my site's CSS and named it `dark`. This will be added as an attribute to the `html` element whenever the switch is toggled. Shown below is a basic dark theme example because my actual CSS is [too long]().
 
     ```css
     /* Basic dark theme */

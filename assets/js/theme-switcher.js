@@ -1,22 +1,23 @@
-// Check local storage for which theme to activate.
-if (localStorage.getItem("grape-color")==="dark") {
-	// Set data-theme to dark.
+function changeTheme(){
+	const theme_switch = document.getElementById("theme-switch");
+	if (theme_switch.checked) {
+		document.documentElement.setAttribute("data-theme","dark");
+		// Add the ff. line to write to memory.
+		localStorage.setItem("my-theme","dark");
+	}
+	else {
+		document.documentElement.removeAttribute("data-theme");
+		// Add the ff. line to write to memory.
+		localStorage.setItem("my-theme",null);
+	}
+}
+
+// Check local storage every reload to know which theme to use.
+if (localStorage.getItem("my-theme")==="dark") {
+	// Use dark theme.
 	document.documentElement.setAttribute("data-theme","dark");
 }
 else {
-	// Set data-theme to default.
-	document.documentElement.removeAttribute("data-theme");
-}
-
-// This function is called everytime you click the toggle button.
-function changeGrape(){
-	// Change to dark if 
-	if (localStorage.getItem("grape-color")==="dark") {
-	  document.documentElement.removeAttribute("data-theme")
-	  localStorage.setItem("grape-color",null);
-	}
-	else {
-	  document.documentElement.setAttribute("data-theme","dark");
-	  localStorage.setItem("grape-color","dark");
-	}
+	// Use default theme.
+	document.documentElement.removeAttribute("data-theme")
 }

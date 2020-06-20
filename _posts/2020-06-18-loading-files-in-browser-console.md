@@ -43,7 +43,7 @@ var script_element = document.createElement("script");
 // Define js file path
 var js_path = "[path_to_js_file]"
 // Define attributes for script element
-script_element.setAttribute("src",scriptpath);
+script_element.setAttribute("src",js_path);
 script_element.setAttribute("type","text/javascript");
 document.head.appendChild(script_element);
 ```

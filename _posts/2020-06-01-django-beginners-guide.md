@@ -3,7 +3,7 @@ layout: post
 title: How to django 💃
 subtitle : Complete guide for your first Django application
 tags: [django, tutorial]
-image: https://avatars1.githubusercontent.com/u/27804?s=400&v=4
+image: 
 displayimage: false
 show: True
 author: Jennie Ablog

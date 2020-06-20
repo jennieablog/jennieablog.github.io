@@ -3,7 +3,7 @@ layout: post
 title: Part 3️⃣ of how to django 💃
 subtitle : Getting data from Django forms
 tags: [django, tutorial]
-image: https://avatars1.githubusercontent.com/u/27804?s=400&v=4
+image: 
 displayimage: false
 show: False
 author: Jennie Ablog

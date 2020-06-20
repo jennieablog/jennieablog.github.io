@@ -3,7 +3,7 @@ layout: post
 title: Loading la vida local 🤪
 subtitle : Loading local js & css files in the browser console
 tags: [javascript, chrome-console, copy-pasta]
-image: https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+image: 
 displayimage: false
 show: True
 author: Jennie Ablog

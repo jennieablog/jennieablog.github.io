@@ -3,7 +3,7 @@ layout: post
 title: Part 4️⃣ of how to django 💃
 subtitle : Deploying your django app
 tags: [deployment, django, tutorial]
-image: https://avatars1.githubusercontent.com/u/27804?s=400&v=4
+image: 
 displayimage: false
 show: False
 author: Jennie Ablog

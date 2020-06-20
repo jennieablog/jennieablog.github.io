@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Let there be 'dark' 🌗
-subtitle : Putting a dark theme switch on my Jekyll site
+subtitle : Putting a dark theme switch on a Jekyll site
 tags: [javascript, css, jekyll]
-image: https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+image: https://ixxidesign.azureedge.net/media/1016694/StarWars-DarthVader.jpg
 displayimage: false
 show: True
 author: Jennie Ablog

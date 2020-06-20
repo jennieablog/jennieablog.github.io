@@ -13,7 +13,7 @@ theme_settings :
     qrcode: assets/img/qrcode.png
     username : Jennie Ablog
     description: BSc Computer Science student from UP Diliman 🇵🇭
-    blog_description : here to code and make puns
+    blog_description : I code and make puns.
     experience :
       - start : "June 2017 "
         end: "August 2017"

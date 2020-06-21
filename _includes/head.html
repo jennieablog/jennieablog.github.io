@@ -30,11 +30,12 @@
   <meta name="title" content="{{ title }}" />
   <meta name="author" content="{{ site.theme_settings.profile.username }}" />
   <meta name="keywords" content="{{ page.tags | join: ',' }}" />
-  <meta name="description" content="{{ page.subtitle }}" />
+  <meta name="description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.theme_settings.profile.description }}{% endif %}" />
   <meta name="robots" content="index,follow" />
 
   <meta property="og:title" content="{{ title }}" />
-  <meta property="og:description" content="{{ page.subtitle }}" />
+  <meta property="og:description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.theme_settings.profile.description }}{% endif %}" />
+
   <meta property="og:type" content="website, blog" />
   <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.theme_settings.profile.logo }}{% endif %}" />
   <meta property="og:site_name" content="{{ site.theme_settings.title }}" />
@@ -42,7 +43,7 @@
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ page.subtitle }}" />
+  <meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.theme_settings.profile.description }}{% endif %}" />
   <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/{{ site.theme_settings.profile.logo }}{% endif %}" />
   
   <!-- Title -->

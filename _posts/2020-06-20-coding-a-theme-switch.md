@@ -251,9 +251,9 @@ In summary, here is how I implemented my dark theme switch. 💁🏽
 
 # JavaScript
 
-1. I deleted all previously coded JavaScripts and created a new file called `assets/js/theme-switcher.js`.
+1. I created a new JS file at `assets/js/` called `theme-switcher.js`.
 
-2. I put this script instead. This caches data in the browser's `localStorage` so that the theme is retained.  It checks the browser's `localStorage` every time the site is reloaded and applies the theme that's written there. It also writes to `localStorage` every time the switch is toggled.
+2. So that the theme is retained anywhere I go in the site, I made a script that writes to cache by adding an item called `my-theme` to the browser's `localStorage`.  The script checks the browser's `localStorage` for `my-theme` every time the site is reloaded and depending on its value, applies the `data-theme` attribute to the `html` element. It also overwrites the item every time the switch is toggled.
 
     ```jsx
     // This function runs every time the switch is toggled.

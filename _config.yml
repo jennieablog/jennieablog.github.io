@@ -13,8 +13,8 @@ theme_settings :
     logo : assets/logo.png
     qrcode: assets/img/qrcode.png
     username : Jennie Ablog
-    description: BSc Computer Science student from UP Diliman 🇵🇭
-    blog_description : I code and make puns.
+    description: BS Computer Science student from UP Diliman 🇵🇭
+    blog_description : BS CS student from UP Diliman, writes code and likes puns.
     experience :
       - start : "June 2017 "
         end: "August 2017"
@@ -24,23 +24,22 @@ theme_settings :
         experience : Intern, UP ITDC
       - start : "2014"
         end : ""
-        experience : BSc CS Student, UP Diliman
+        experience : BS CS Student, UP Diliman
         
     programming : 
       - skill : python
       - skill : c
       - skill : c++
-      - skill : java
       - skill : ruby
+      - skill : java
 
     webdev : 
       - skill : ruby on rails
+      - skill : jekyll
+      - skill : flask
       - skill : html5
       - skill : css3
       - skill : javascript
-      - skill : jekyll
-      - skill : react native
-      - skill : flask
       - skill : bootstrap
     
     others : 

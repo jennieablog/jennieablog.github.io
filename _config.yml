@@ -75,6 +75,6 @@ paginate_path: "blog/page:num"
 sass:
   sass_dir: _sass
   style: :compressed
-gems: [jekyll-paginate]
+gems: [jekyll-paginate,jekyll-sitemap]
 bootstrap:
   assets: true

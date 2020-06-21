@@ -5,7 +5,7 @@ subtitle : Deploying your django app
 tags: [deployment, django, tutorial]
 image: 
 displayimage: false
-show: False
+show: True
 author: Jennie Ablog
 comments : True
 ---

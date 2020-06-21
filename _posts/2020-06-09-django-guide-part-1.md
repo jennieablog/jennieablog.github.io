@@ -5,7 +5,7 @@ subtitle : Initializing your Django application
 tags: [django, tutorial]
 image: 
 displayimage: false
-show: False
+show: True
 author: Jennie Ablog
 comments : True
 ---

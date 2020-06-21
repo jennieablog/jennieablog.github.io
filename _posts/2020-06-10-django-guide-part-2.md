@@ -5,7 +5,7 @@ subtitle : Creating the Django application interface
 tags: [django, tutorial]
 image: 
 displayimage: false
-show: False
+show: True
 author: Jennie Ablog
 comments : True
 ---

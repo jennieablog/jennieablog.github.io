@@ -5,7 +5,7 @@ url : "https://jennieablog.github.io"
 # Blog Settings
 theme_settings :
   title : Jennie Ron Ablog
-  favicon : assets/icon.ico
+  favicon : assets/disk.ico
 
   # Profile Settings
   profile :

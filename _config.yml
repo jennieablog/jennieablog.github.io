@@ -4,7 +4,7 @@ url : "https://jennieablog.github.io"
 
 # Blog Settings
 theme_settings :
-  title : Jennie Ablog
+  title : Jennie Ron Ablog
   favicon : assets/favicon.ico
 
   # Profile Settings
@@ -12,7 +12,7 @@ theme_settings :
     image : assets/img/profile.jpg
     logo : assets/logo.png
     qrcode: assets/img/qrcode.png
-    username : Jennie Ablog
+    username : Jennie Ron Ablog
     description: BS Computer Science student from UP Diliman 🇵🇭
     blog_description : BS CS student from UP Diliman, writes code and likes puns.
     experience :
@@ -54,7 +54,7 @@ theme_settings :
   # Icons
   icons :
     email:  jsablog@up.edu.ph
-    linkedin: https://www.linkedin.com/in/jennie-ron-ablog-489845143/
+    linkedin: 
     github: jennieablog
     gitlab: 
     bitbucket: 

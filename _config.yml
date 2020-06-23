@@ -46,7 +46,6 @@ theme_settings :
       - skill : git
       - skill : nem blockchain
       - skill : godot game engine
-      - skill : blender
       - skill : sklearn
       - skill : pygame
 

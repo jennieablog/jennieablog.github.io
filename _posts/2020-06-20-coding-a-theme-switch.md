@@ -3,10 +3,10 @@ layout: post
 title: Let there be 'dark' 🌗
 subtitle : Creating a dark theme switch for a static site generator
 tags: [dark-theme, javascript, css, jekyll, fouc]
-image: 
-displayimage: false
+image: https://i.imgur.com/FyoQjQd.png
+displayimage: True
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

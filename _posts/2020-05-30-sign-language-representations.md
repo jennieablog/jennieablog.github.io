@@ -3,9 +3,9 @@ layout: post
 title: "It's a sign 🤟"
 subtitle : Representations of sign languages in various media
 tags: [sign-language]
-image: 
-displayimage: 
-author: Jennie Ablog
+image: https://i.imgur.com/94z6wVm.png
+displayimage: True
+author: Jennie Ron Ablog
 comments : true
 show: True
 ---

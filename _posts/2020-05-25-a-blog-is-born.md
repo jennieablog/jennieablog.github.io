@@ -1,11 +1,12 @@
 ---
 layout: post
 title: A blog is born 👶
-subtitle : Creating a website in under an hour & hosting it for free
+subtitle : Creating a blog-portfolio using Jekyll & GitHub Pages
 tags: [jekyll, github-pages, tutorial]
-displayimage: false
+image: https://i.imgur.com/VTlEvQW.png
+displayimage: True
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

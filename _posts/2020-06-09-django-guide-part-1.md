@@ -3,10 +3,10 @@ layout: post
 title: Part 1️⃣ of how to django 💃
 subtitle : Initializing your Django application
 tags: [django, tutorial]
-image: 
-displayimage: false
+image: https://i.imgur.com/lXMfhlZ.png
+displayimage: True
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

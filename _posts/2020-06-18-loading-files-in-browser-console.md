@@ -6,7 +6,7 @@ tags: [javascript, chrome-console, copy-pasta]
 image: 
 displayimage: false
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

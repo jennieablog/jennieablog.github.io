@@ -3,10 +3,10 @@ layout: post
 title: Part 2️⃣ of how to django 💃
 subtitle : Creating the Django application interface
 tags: [django, tutorial]
-image: 
-displayimage: false
+image: https://i.imgur.com/o5RBSDm.png
+displayimage: True
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

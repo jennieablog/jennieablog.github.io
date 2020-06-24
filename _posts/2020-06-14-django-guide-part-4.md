@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Part 4️⃣ of how to django 💃
-subtitle : Deploying your django app
-tags: [deployment, django, tutorial]
-image: 
-displayimage: false
+subtitle : Deploying your Django app to Heroku
+tags: [deployment, django, tutorial, heroku]
+image: https://i.imgur.com/gX5yjjz.png
+displayimage: True
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

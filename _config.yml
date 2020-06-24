@@ -5,15 +5,15 @@ url : "https://jennieablog.github.io"
 # Blog Settings
 theme_settings :
   title : Jennie Ron Ablog
-  favicon : assets/disk.ico
+  favicon : assets/icon.png
 
   # Profile Settings
   profile :
     image : assets/img/profile.jpg
-    logo : assets/logo.png
+    logo : https://imgur.com/IpYZkgX.png
     qrcode: assets/img/qrcode.png
     username : Jennie Ron Ablog
-    description: BS Computer Science student from UP Diliman 🇵🇭
+    description: BS Computer Science student from UP Diliman
     blog_description : BS CS student from UP Diliman, writes code and likes puns.
     experience :
       - start : "June 2017 "

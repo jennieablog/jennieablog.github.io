@@ -3,10 +3,10 @@ layout: post
 title: How to django 💃
 subtitle : Complete guide for your first Django application
 tags: [django, tutorial]
-image: 
-displayimage: false
+image: https://i.imgur.com/SkPr5ir.png
+displayimage: True
 show: True
-author: Jennie Ablog
+author: Jennie Ron Ablog
 comments : True
 ---
 

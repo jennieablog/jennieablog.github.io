@@ -23,8 +23,8 @@
 - project :
     print : False # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
     modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
-    website : https://jennieablog.github.io/rotc_enlistment_monitoring
-    url : https://github.com/jennieablog/rotc_enlistment_monitoring # Full URL
+    website : https://jennieablog.github.io/ROTC-enlistment-monitoring
+    url : https://github.com/jennieablog/ROTC-enlistment-monitoring # Full URL
     date : 2018.08.02
     title : ROTC Enlistment Status Checker
     summary: CRS Results Monitoring Tool

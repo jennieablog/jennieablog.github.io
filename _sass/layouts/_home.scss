@@ -13,7 +13,7 @@
     }
     #header-content{
         @extend %page-padding;
-        color: #fff;
+        color: $theme-color;
     }
     .bg{
         content: "";

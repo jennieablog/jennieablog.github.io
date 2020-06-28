@@ -46,9 +46,6 @@ theme_settings :
       - skill : git
       - skill : nem blockchain
       - skill : godot game engine
-      - skill : sklearn
-      - skill : pygame
-
 
   # Icons
   icons :
@@ -67,13 +64,13 @@ theme_settings :
   disqus_shortname : jennieablog-github-io
 
 # Pagination
-paginate: 5
+paginate: 10
 paginate_path: "blog/page:num"
 
 # Build Ssttings
 sass:
   sass_dir: _sass
   style: :compressed
-gems: [jekyll-paginate,jekyll-sitemap]
+plugins: [jekyll-paginate,jekyll-sitemap]
 bootstrap:
   assets: true

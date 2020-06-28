@@ -5,7 +5,7 @@ subtitle : Getting data from Django forms
 tags: [django, tutorial]
 image: https://i.imgur.com/bT5cvpf.png
 displayimage: True
-show: True
+show: False
 author: Jennie Ron Ablog
 comments : True
 ---

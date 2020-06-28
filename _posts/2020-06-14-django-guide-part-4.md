@@ -5,7 +5,7 @@ subtitle : Deploying your Django app to Heroku
 tags: [deployment, django, tutorial, heroku]
 image: https://i.imgur.com/gX5yjjz.png
 displayimage: True
-show: True
+show: False
 author: Jennie Ron Ablog
 comments : True
 ---

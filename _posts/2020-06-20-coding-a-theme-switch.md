@@ -111,7 +111,7 @@ Okay so I already have the switch. The thing is, when I navigate to other pages 
 ## Coming over to the 'dark-mode-switch'
 ***
 
-The Dark Reader switch worked. The effect looked pretty decent at the start, but I figured it really didn't work so well with my theme's color scheme. So I looked for ways where I could define my preferred "dark" colors. I came across the [Dark Mode Switch](https://coliff.github.io/dark-mode-switch/) on GitHub. From it, I figured I could use a toggle switch instead of a checkbox instead. I got rid of my Dark Reader code and tried this new `dark-mode-switch` instead. Here's how I did it according to the website:
+The Dark Reader switch worked. The effect looked pretty decent at the start, but I figured it really didn't work so well with my theme's color scheme. So I looked for ways where I could define my preferred "dark" colors. I came across the [Dark Mode Switch](https://coliff.github.io/dark-mode-switch/) on GitHub. From it, I figured I could use a toggle switch instead of a checkbox. I got rid of my Dark Reader code and tried this new `dark-mode-switch` that I found. Here's how I did it according to the website:
 
 <br>
 

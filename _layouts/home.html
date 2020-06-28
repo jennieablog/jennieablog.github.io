@@ -6,12 +6,14 @@ layout: default
   <section id="header-nav">
     {% include header.html %}
   </section>
-  <section id="header-content">
-    <h1>{{ site.theme_settings.title }}</h1>
-    <!-- <p>{{ site.theme_settings.profile.blog_description }}</p> -->
-  </section>
-  <section class="bg"></section>
-  <div class="row">
+  <section id="header-content" style="text-align: center;">
+    <h1 class="title"><i class="fab fa-github" style="font-size:1.8rem;"></i> jennieablog</h1><br>
+    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/jennieablog">
+    <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+    <span style="margin-left:5px;font-size:28px !important;font-family: 'Cookie', cursive;">Buy me a coffee</span>
+  </a>
+  </section><br>
+  <div class="row" style="padding-top: 0px !important;">
     <!-- Aside Navigation  -->
     <aside id="aside" class="col-md-4">
       {% include aside.html %}
@@ -45,15 +47,14 @@ layout: default
                 </ul>
               </div>
             </div>
-
           </div>
         </a>
       </div>
       {% endif %}
       {% endfor %}
       <!-- Pagination -->
-      {% if paginator.total_pages > 1 %}
       <div id="pagination">
+      {% if paginator.total_pages > 1 %}
         <ul>
           {% assign q = paginator.page | divided_by: 5 %}
           {% assign min = q | times: 5  %}
@@ -85,8 +86,8 @@ layout: default
           </a>
           {% endif %}
         </ul>
+              {% endif %}
       </div>
-      {% endif %}
     </section>
   </div>
 </div>

@@ -1,25 +1,28 @@
 - project :
+    print : False # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    website : https://signtyper.herokuapp.com/
+    url : https://github.com/jennieablog/signtyper # Full URL
+    date : 2020.08 - Developing
+    title : SignTyper
+    description : "A web application for documenting signs in Filipino Sign Language (FSL)."
+
+- project :
+    print : False # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
+    modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
+    url : https://github.com/jennieablog/feederadicator # Full URL
+    date : "2020.09.23"
+    title : Feed Eradicator
+    description : "A CSS-only solution for eradicating the Twitter Timeline and Facebook News Feed in Safari."
+
+- project :
     print : True # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
     modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 
     url : https://github.com/jennieablog/EnglishToSign # Full URL
-    image :  englishtofsl.png # path: assets/project/
     date : 2019.11.11 - Developing
     title : English2FSL
-    summary : A System for Converting English Text to FSL
     description : "An automatic translation system from English text to Filipino Sign Language (FSL)"
-    contents :
-        - title : Translation Process
-          description : <ol><li>1. Parsing</li>
-            <li>2. Omission</li>
-            <li>3. Translation</li>
-            <li>4. Lemmatization</li>
-            <li>5. Animation</li></ol>
-        - title : Dev Tools
-          description :
-            <li>Python NLTK Library</li>
-            <li>JASigning Applet</li>
-            <li>ESign Editor</li>
-            <li>Flask</li>
+
 - project :
     print : False # If 'False' is selected, it will not be displayed in 'home.html > aside > .proj-content'. 
     modal : True # If 'True' is selected, modal can open in 'portfolio.html'. 

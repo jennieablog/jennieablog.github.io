@@ -32,8 +32,10 @@ theme_settings :
       - skill : c++
       - skill : ruby
       - skill : java
+      - skill : javascript
 
     webdev : 
+      - skill : django
       - skill : ruby on rails
       - skill : jekyll
       - skill : flask
@@ -41,6 +43,8 @@ theme_settings :
       - skill : css3
       - skill : javascript
       - skill : bootstrap
+      - skill : gatsby
+      - skill : jamstack
     
     others : 
       - skill : git

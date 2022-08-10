@@ -30,6 +30,7 @@ Listed above are what I think are the prerequisites for this particular guide. I
 - [Python Object-oriented Programming](https://www.programiz.com/python-programming/object-oriented-programming)
 - [Basic HTML and HTML5](https://www.freecodecamp.org/learn/responsive-web-design/basic-html-and-html5/)
 - [CSS in 5 minutes](https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/)
+- [HTML Tutorial for Beginners](https://www.scaler.com/topics/html/)
 
 <br>
 
